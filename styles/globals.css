@@ -1,26 +1,101 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+@font-face {
+  font-family: 'TT Commons';
+  src: url('/fonts/inter/Black.otf');
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+@font-face {
+  font-family: 'TT Commons';
+  src: url('/fonts/inter/Bold.otf');
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
 }
 
-* {
-  box-sizing: border-box;
+@font-face {
+  font-family: 'TT Commons';
+  src: url('/fonts/inter/ExtraBold.otf');
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
+@font-face {
+  font-family: 'TT Commons';
+  src: url('/fonts/inter/SemiBold.otf');
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  src: url('/fonts/inter/Medium.otf');
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  src: url('/fonts/inter/Regular.otf');
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  src: url('/fonts/inter/Light.otf');
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  src: url('/fonts/inter/ExtraLight.otf');
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'TT Commons';
+  src: url('/fonts/inter/Think.otf');
+  font-style: normal;
+  font-weight: 100;
+  font-display: swap;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .inter_font {
+    font-family: 'Inter', sans-serif;
   }
-  body {
-    color: white;
-    background: black;
+
+  .commons_font {
+    font-family: 'TT Commons', sans-serif;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply rounded-xl w-full px-12 py-3 text-sm font-medium focus:outline-none;
+  }
+
+  .btn-outlined {
+    @apply border border-white hover:border-gray-100 text-white sm:w-auto hover:text-gray-100 active:text-gray-100;
+  }
+
+  .btn-solid {
+    @apply bg-white text-blue hover:bg-gray-200 active:bg-gray-100;
   }
 }
