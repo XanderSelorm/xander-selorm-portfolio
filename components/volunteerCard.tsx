@@ -10,15 +10,17 @@ interface Props {
 
 const VolunteerCard = (props: Props) => {
   return (
-    <div className="space-y-4 cursor-pointer hover:bg-[#fff] px-5 py-4 rounded-xl transition duration-500">
-      <div className="relative rounded-xl overflow-hidden w-full h-[300px]">
+    <div className="space-y-4">
+      <div className="relative h-[300px] w-full overflow-hidden">
         <Image src={props.imgSrc} alt="" layout="fill" objectFit="cover" />
       </div>
       <h6 className="text-2xl text-blue">{props.title}</h6>
-      <p className="text-primary-text text-base">{props.description}</p>
-      <div className="text-blue text-base underline">
-        <Link href={props.link}>Read more...</Link>
-      </div>
+      <p className="text-base text-primary-text">{props.description}</p>
+      {props.link && (
+        <div className="text-base text-blue underline">
+          <Link href={props.link}>Read more...</Link>
+        </div>
+      )}
     </div>
   );
 };

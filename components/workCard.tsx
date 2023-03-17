@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { HiOutlineArrowUpRight } from 'react-icons/hi2';
 
 interface Props {
   imgSrc: string;
@@ -11,17 +12,21 @@ interface Props {
 
 const WorkCard = (props: Props) => {
   return (
-    <div className="space-y-4 cursor-pointer hover:bg-[#fff] px-5 py-4 rounded-xl transition duration-500">
-      <div className="relative rounded-xl overflow-hidden w-full h-[300px]">
-        <Image src={props.imgSrc} alt="" layout="fill" objectFit="cover" />
+    <div className="flex flex-wrap space-x-20 py-8 px-8 md:flex-nowrap md:px-0">
+      <div className="relative m-3 h-[100px] w-[100px] overflow-hidden rounded-xl">
+        <Image src={props.imgSrc} alt="" layout="fill" objectFit="contain" />
       </div>
-      <h6 className="text-2xl text-blue">{props.title}</h6>
-      <p className="text-primary-text text-base">{props.responsibilites}</p>
-      {props.link && (
-        <div className="text-blue text-base underline">
-          <Link href={props.link}>Read more...</Link>
-        </div>
-      )}
+      <div className=" flex grow flex-col space-y-2">
+        <h6 className="text-2xl text-blue">{props.title}</h6>
+        <p className="text-base text-primary-text">{props.responsibilites}</p>
+        {props.link && (
+          <div className="text-base text-blue underline">
+            <Link href={props.link}>
+              See more... <HiOutlineArrowUpRight />
+            </Link>
+          </div>
+        )}
+      </div>
     </div>
   );
 };

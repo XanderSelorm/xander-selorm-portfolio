@@ -10,12 +10,19 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import Script from 'next/script';
+import {
+  FaGoogle,
+  FaLinkedin,
+  FaTwitterSquare,
+  FaFacebookSquare,
+  FaInstagram,
+} from 'react-icons/fa';
 
 const Home: NextPage = () => {
   const router = useRouter();
 
   return (
-    <>
+    <div className="flex flex-col items-center">
       <Head>
         <title>Xander Selorm | Portfolio</title>
         <link rel="icon" href="/icons/fav.ico" />
@@ -24,63 +31,81 @@ const Home: NextPage = () => {
       <Navbar />
 
       {/* <!-- Hero --> */}
-      <section className=" bg-blue text-white h-[80vh] flex items-center justify-center">
-        <div className="flex items-center justify-between max-w-6xl px-4 mx-auto sm:px-6 lg:px-8 w-full">
-          <div className="order-2 md:order-1 max-w-xl text-center sm:text-left">
-            <h1 className="text-3xl font-extrabold sm:text-5xl">
-              {'Hi there 👋🏽, I’m Selorm'}
-            </h1>
+      <section className=" flex w-full items-center justify-center bg-blue py-14 text-white">
+        <div className="mx-auto flex w-full max-w-4xl flex-col items-center justify-center space-y-4 px-4 sm:px-0">
+          <h1 className="text-3xl font-extrabold sm:text-5xl">
+            {'I’m Selorm, a software developer👨🏾‍💻 based in Ghana 🇬🇭'}
+          </h1>
 
-            <p className="mt-4 sm:leading-relaxed">
-              I implement designs and experiences users tend to have when
-              interacting with digital products such as websites, web apps and
-              mobile applications. <br />I am currently a Software Engineer at
-              Scynett GmbH and a Tech Lead at Kauri Africa.
-            </p>
+          <p className=" text-2xl sm:leading-relaxed">
+            I implement designs and experiences you tend to have when
+            interacting with digital products such as websites, web apps and
+            mobile applications. I am currently a software engineer at{' '}
+            <Link href={'https://scynett.com/'} target="_blank" className="">
+              <a className=""> Scynett GmbH</a>
+            </Link>
+            .
+          </p>
 
-            <div className="flex flex-wrap mt-8 text-center">
+          {/* <div className="mt-8 flex flex-col space-y-10 text-center">
               <Link href="">
-                <button className="btn btn-outlined">
+                <button className="btn btn-outlined w-fit">
                   {`Let's get in touch`}
                 </button>
               </Link>
-            </div>
-          </div>
 
-          <div className="order-1 md:order-2 hidden md:flex items-center justify-center w-[300px] h-[300px] relative rounded-full overflow-hidden">
-            <Image
-              // src="/imgs/avatar-smile.jpeg"
-              src="/imgs/hero-image.png"
-              alt=""
-              layout="fill"
-              objectFit="contain"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* <!-- Professional Experiences --> */}
-      <section className="py-14 bg-[#f5f5f5]">
-        <h1 className="text-3xl sm:text-5xl font-bold text-center mb-14 text-blue">
-          Professional Experience
-        </h1>
-        <div className="grid grid-cols-3 gap-x-6 max-w-[80%] mx-auto">
-          <WorkCard
-            imgSrc={''}
-            title={''}
-            responsibilites={''}
-            duration={''}
-            link={null}
-          />
+              <ul className="flex justify-center space-x-3 sm:justify-start">
+                <li className="cursor-pointer">
+                  <Link href="mailto:xanderselorm@gmail.com">
+                    <FaGoogle className="rounded-lg text-2xl" />
+                  </Link>
+                </li>
+                <li className="cursor-pointer">
+                  <Link
+                    href="https://www.linkedin.com/in/XanderSelorm/"
+                    target="_blank"
+                  >
+                    <FaLinkedin className="rounded-lg text-2xl" />
+                  </Link>
+                </li>
+                <li className="cursor-pointer">
+                  <Link
+                    href="https://www.twitter.com/XanderSelorm/"
+                    target="_blank"
+                  >
+                    <FaTwitterSquare className="rounded-lg text-2xl" />
+                  </Link>
+                </li>
+                <li className="cursor-pointer">
+                  <Link
+                    href="https://www.facebook.com/XanderSelorm/"
+                    target="_blank"
+                  >
+                    <FaFacebookSquare className="rounded-lg text-2xl" />
+                  </Link>
+                </li>
+                <li className="cursor-pointer">
+                  <Link
+                    href="https://www.instagram.com/xanderselorm/"
+                    target="_blank"
+                  >
+                    <FaInstagram className="rounded-lg text-2xl" />
+                  </Link>
+                </li>
+              </ul>
+            </div> */}
         </div>
       </section>
 
       {/* <!-- Projects --> */}
-      <section className="py-14">
-        <h1 className="text-3xl sm:text-5xl font-bold text-center mb-14 text-blue">
+      <section
+        id="projects"
+        className="flex w-full max-w-4xl flex-col items-center py-14"
+      >
+        <h1 className="mb-14 text-center text-3xl font-bold text-blue sm:text-5xl">
           Featured Projects
         </h1>
-        <div className="space-y-10 max-w-[80%] mx-auto">
+        <div className="w-full space-y-10">
           <ProjectCard
             title="Project Name"
             description="I implement designs and experiences users tend to have when
@@ -101,48 +126,72 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      {/* <!-- Volunteerism --> */}
-      <section className="py-14 bg-[#f5f5f5]">
-        <h1 className="text-3xl sm:text-5xl font-bold text-center mb-14 text-blue">
-          Volunteerism
+      {/* <!-- Professional Experiences --> */}
+      <section
+        id="career"
+        className="flex w-full max-w-4xl flex-col items-center py-14"
+      >
+        <h1 className="mb-14 text-center text-3xl font-bold text-blue sm:text-5xl">
+          Professional Experience
         </h1>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-x-6 max-w-[80%] mx-auto">
-          <VolunteerCard
-            imgSrc={'/imgs/rails-girls-tamale-xander-group.jpg'}
-            title={'Lorem, ipsum dolor.'}
-            description={`I volunteered to teach Ruby on Rails in Tamale ,the northern region
-            of Ghana. Rails girls is a free workshop for women to get interested
-            in computer programming . This is achieved by providing a great
-            experience on building things and by making technology more
-            approachable.`}
-            link={''}
-          />
-
-          <VolunteerCard
-            imgSrc={'/imgs/rails-girls-tamale-xander-group.jpg'}
-            title={'Lorem, ipsum dolor.'}
-            description={`I volunteered to teach Ruby on Rails in Tamale ,the northern region
-            of Ghana. Rails girls is a free workshop for women to get interested
-            in computer programming . This is achieved by providing a great
-            experience on building things and by making technology more
-            approachable.`}
-            link={''}
-          />
-
-          <VolunteerCard
-            imgSrc={'/imgs/rails-girls-tamale-xander-group.jpg'}
-            title={'Lorem, ipsum dolor.'}
-            description={`I volunteered to teach Ruby on Rails in Tamale ,the northern region
-            of Ghana. Rails girls is a free workshop for women to get interested
-            in computer programming . This is achieved by providing a great
-            experience on building things and by making technology more
-            approachable.`}
-            link={''}
+        <div className="w-full space-y-10">
+          <WorkCard
+            imgSrc={
+              'https://i.pinimg.com/736x/6e/de/9a/6ede9a835035ba5d9d43c510e63cfb5d--jumpman-logo-famous-logos.jpg'
+            }
+            title={'This is a work card'}
+            responsibilites={'I did something'}
+            duration={'4 years'}
+            link={null}
           />
         </div>
       </section>
+
+      {/* <!-- Volunteerism --> */}
+      <section
+        id="community"
+        className="flex w-full flex-col items-center py-14"
+      >
+        <h1 className="mb-14 text-center text-3xl font-bold text-blue sm:text-5xl">
+          Volunteerism
+        </h1>
+        <div className="mx-auto flex max-w-[80%] gap-x-10">
+          <VolunteerCard
+            imgSrc={'/imgs/rails-girls-tamale-xander-group.jpg'}
+            title={'Rails Girls - Tamale, Ghana'}
+            description={`I volunteered to teach Ruby on Rails in Tamale, the northern region
+            of Ghana. Rails girls is a free workshop for women to get interested
+            in computer programming . This is achieved by providing a great
+            experience on building things and by making technology more
+            approachable.`}
+            link={''}
+          />
+
+          <VolunteerCard
+            imgSrc={'/imgs/rails-girls-tamale-xander-group.jpg'}
+            title={'Initiate Hub - Hohoe, Ghana'}
+            description={`I volunteered to teach Ruby on Rails in Tamale ,the northern region
+            of Ghana. Rails girls is a free workshop for women to get interested
+            in computer programming . This is achieved by providing a great
+            experience on building things and by making technology more
+            approachable.`}
+            link={''}
+          />
+          {/* 
+          <VolunteerCard
+            imgSrc={'/imgs/rails-girls-tamale-xander-group.jpg'}
+            title={'Lorem, ipsum dolor.'}
+            description={`I volunteered to teach Ruby on Rails in Tamale ,the northern region
+            of Ghana. Rails girls is a free workshop for women to get interested
+            in computer programming . This is achieved by providing a great
+            experience on building things and by making technology more
+            approachable.`}
+            link={''}
+          /> */}
+        </div>
+      </section>
       <Footer />
-    </>
+    </div>
   );
 };
 
