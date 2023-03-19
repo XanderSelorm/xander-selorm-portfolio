@@ -13,7 +13,7 @@ import Link from 'next/link';
 
 const Contact: NextPage = () => {
   return (
-    <Layout title="Home">
+    <Layout title="Contact Me">
       <Section
         className="h-[44vh] bg-blue pt-48 text-center text-white"
         isFullWidth

@@ -13,7 +13,7 @@ import Link from 'next/link';
 
 const Works: NextPage = () => {
   return (
-    <Layout title="Home">
+    <Layout title="About Me">
       <Hero>
         <div className="relative h-full w-full rounded-lg">
           <div className="h-full w-full overflow-clip rounded-lg bg-[url(/imgs/about-image-pattern.png)] shadow">
