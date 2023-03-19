@@ -13,13 +13,13 @@ interface Props {
 
 const ProjectCard = (props: Props) => {
   return (
-    <div className="flex flex-col space-y-4 py-8 px-8 md:px-0">
+    <div className="flex flex-col items-center space-y-4 py-8 sm:items-start md:px-0">
       <section
-        className={`relative h-60 overflow-clip  rounded-lg bg-blue text-white`}
+        className={`relative h-60 w-full overflow-clip rounded-lg bg-blue text-white`}
       >
         <Image src={props.imgSrc} alt="" layout="fill" objectFit="cover" />
       </section>
-      <div className="space-y-4 text-center sm:text-left">
+      <div className="flex flex-col items-center space-y-4 text-center sm:items-start sm:text-left">
         <p className="text-lg font-thin sm:leading-relaxed">
           {props.stack.toUpperCase()}
         </p>
@@ -30,8 +30,8 @@ const ProjectCard = (props: Props) => {
         <div className="flex w-fit flex-wrap text-center text-lg font-semibold hover:text-blue hover:underline">
           {props.link ? (
             <Link href={props.link}>
-              <div className="flex flex-nowrap items-center space-x-2">
-                <div>Let me see</div> <FiArrowUpRight />
+              <div className="flex cursor-pointer flex-nowrap items-center space-x-2">
+                <div>See more</div> <FiArrowUpRight />
               </div>
             </Link>
           ) : (

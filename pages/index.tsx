@@ -1,25 +1,39 @@
 import Hero from 'components/hero';
 import Layout from 'components/Layout';
 import ProjectCard from 'components/projectCard';
+import Section from 'components/section';
 import VolunteerCard from 'components/volunteerCard';
 import WorkCard from 'components/workCard';
 import type { NextPage } from 'next';
+import Link from 'next/link';
 import projectsData from 'resources/projects-data';
 
 const Home: NextPage = () => {
   return (
     <Layout title="Home">
       {/* <!-- Hero --> */}
-      <Hero />
+      <Hero>
+        <>
+          <h1 className="text-3xl font-extrabold sm:text-5xl">
+            {'I’m Selorm, a software developer👨🏾‍💻 based in Ghana 🇬🇭'}
+          </h1>
+
+          <p className="text-2xl sm:leading-relaxed">
+            I implement designs and experiences you tend to have when
+            interacting with digital products such as websites, web apps and
+            mobile applications. I am currently a software engineer at{' '}
+            <Link href={'https://scynett.com/'} target="_blank">
+              <a className="text-yellow hover:underline"> Scynett GmbH</a>
+            </Link>
+            .
+          </p>
+        </>
+      </Hero>
 
       {/* <!-- Projects --> */}
-      <section
-        id="projects"
-        className="flex w-full max-w-4xl flex-col items-center py-14"
-      >
-        <h1 className="mb-14 text-center text-3xl font-bold text-blue sm:text-5xl">
-          Featured Projects
-        </h1>
+      <Section>
+        <h1 className="text-3xl font-bold text-blue">Featured Projects</h1>
+
         <div className="w-full space-y-10">
           {projectsData.map(item => (
             <ProjectCard
@@ -32,72 +46,7 @@ const Home: NextPage = () => {
             />
           ))}
         </div>
-      </section>
-
-      {/* <!-- Professional Experiences --> */}
-      <section
-        id="career"
-        className="flex w-full max-w-4xl flex-col items-center py-14"
-      >
-        <h1 className="mb-14 text-center text-3xl font-bold text-blue sm:text-5xl">
-          Professional Experience
-        </h1>
-        <div className="w-full space-y-10">
-          <WorkCard
-            imgSrc={
-              'https://i.pinimg.com/736x/6e/de/9a/6ede9a835035ba5d9d43c510e63cfb5d--jumpman-logo-famous-logos.jpg'
-            }
-            title={'This is a work card'}
-            responsibilites={'I did something'}
-            duration={'4 years'}
-            link={null}
-          />
-        </div>
-      </section>
-
-      {/* <!-- Volunteerism --> */}
-      <section
-        id="community"
-        className="flex w-full flex-col items-center py-14"
-      >
-        <h1 className="mb-14 text-center text-3xl font-bold text-blue sm:text-5xl">
-          Volunteerism
-        </h1>
-        <div className="mx-auto flex max-w-[80%] gap-x-10">
-          <VolunteerCard
-            imgSrc={'/imgs/rails-girls-tamale-xander-group.jpg'}
-            title={'Rails Girls - Tamale, Ghana'}
-            description={`I volunteered to teach Ruby on Rails in Tamale, the northern region
-            of Ghana. Rails girls is a free workshop for women to get interested
-            in computer programming . This is achieved by providing a great
-            experience on building things and by making technology more
-            approachable.`}
-            link={''}
-          />
-
-          <VolunteerCard
-            imgSrc={'/imgs/rails-girls-tamale-xander-group.jpg'}
-            title={'Initiate Hub - Hohoe, Ghana'}
-            description={`I volunteered to teach Ruby on Rails in Tamale ,the northern region
-            of Ghana. Rails girls is a free workshop for women to get interested
-            in computer programming . This is achieved by providing a great
-            experience on building things and by making technology more
-            approachable.`}
-            link={''}
-          />
-          {/* 
-          <VolunteerCard
-            imgSrc={'/imgs/rails-girls-tamale-xander-group.jpg'}
-            title={'Lorem, ipsum dolor.'}
-            description={`I volunteered to teach Ruby on Rails in Tamale ,the northern region
-            of Ghana. Rails girls is a free workshop for women to get interested
-            in computer programming . This is achieved by providing a great
-            experience on building things and by making technology more
-            approachable.`}
-            link={''}
-          /> */}
-        </div>
-      </section>
+      </Section>
     </Layout>
   );
 };

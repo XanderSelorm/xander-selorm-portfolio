@@ -6,10 +6,11 @@ import {
   FaLinkedin,
   FaTwitterSquare,
 } from 'react-icons/fa';
+import Hero from './hero';
 
 const Footer = () => {
   return (
-    <footer className="h-auto w-full bg-blue py-5 text-white">
+    <Hero>
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="my-8 flex w-full flex-col items-center space-y-8">
           <div className="flex flex-1 flex-col space-y-5 text-center sm:text-start">
@@ -67,7 +68,7 @@ const Footer = () => {
           </a>
         </div>
       </div>
-    </footer>
+    </Hero>
   );
 };
 

@@ -14,13 +14,6 @@ of your business locations, while meeting all privacy, compliance and safety req
             stack: "React JS | TypeScript | TailwindCSS",
         },
         {
-            name: "The Business Directory",
-            url: "https://www.wedeyvolta.com",
-            description: "This is the description for Project 3.",
-            image: "/imgs/business-directory-project.png",
-            stack: "React JS | Firebase",
-        },
-        {
             name: "Tailor's Note Web & Mobile",
             url: "https://www.tailorsnote.com",
             description: "This is the description for Project 2.",
@@ -40,6 +33,13 @@ of your business locations, while meeting all privacy, compliance and safety req
             description: "This is the description for Project 5.",
             image: "/imgs/treesyt-project.png",
             stack: "Next JS | TypeScript | TailwindCSS",
+        },
+        {
+            name: "The Business Directory",
+            url: "https://www.wedeyvolta.com",
+            description: "This is the description for Project 3.",
+            image: "/imgs/business-directory-project.png",
+            stack: "React JS | Firebase",
         },
         {
             name: "Dev's Pool",

@@ -8,10 +8,16 @@ module.exports = {
     extend: {
       colors: {
         blue: "#06325d",
-            yellow: "#ffff00",
+        yellow: "#ffff00",
         "primary-text": "#333333",
         "secondary-text": "",
       },
+        fontSize: {
+          sm: ['14px', '20px'],
+          base: ['16px', '24px'],
+          lg: ['20px', '28px'],
+          xl: ['24px', '32px'],
+        }
     },
   },
   plugins: [],
