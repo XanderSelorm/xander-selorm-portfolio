@@ -13,15 +13,19 @@ const aboutMeData: AboutMeData = {
     ],
     education: [
         {
-            schoolName: "",
-            programme: "",
+            schoolName: "University of Education, Winneba, Ghana",
+            programme: "BSc. Information and Communication Technology",
         }
     ],
     skills: [""],
-    courses: [
+    certifications: [
         {
-            title: "",
-            link: "",
+            title: "Android Development Certificate, Google Africa Developer Training Program",
+            link: "https://adscerts.com/scholar/544518FBC4F2873C",
+        },
+        {
+            title: "Cyber Security and Ethical Hacking Training, CITA (Corporate IT Academy)",
+            link: ""
         }
     ],
     techStacks: [""],

@@ -3,7 +3,7 @@ export interface AboutMeData {
     workExperience: WorkExperience[];
     education: Education[];
     skills: string[];
-    courses: Course[];
+    certifications: Course[];
     techStacks: string[];
 }
 

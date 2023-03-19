@@ -18,7 +18,7 @@ const WorkCard = (props: Props) => {
       </div>
       <div className="col-span-4 space-y-2">
         <h6 className="text-2xl text-blue">{props.title}</h6>
-        <p className="text-base text-primary-text">{props.responsibilites}</p>
+        <p className="text-base text-gray-text">{props.responsibilites}</p>
         {props.link && (
           <div className="text-base text-blue underline">
             <Link href={props.link}>
