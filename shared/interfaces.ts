@@ -1,5 +1,5 @@
 export interface AboutMeData {
-    brief: string;
+    brief: string[];
     workExperience: WorkExperience[];
     education: Education[];
     skills: string[];

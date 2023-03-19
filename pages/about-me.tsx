@@ -76,12 +76,9 @@ const Works: NextPage = () => {
         </div>
       </Hero>
       <Section className="text-lg">
-        <p>
-          {`Over the past 3+, I've been implementing user friendly UIs and experiences. I've tackled a diverse range of projects spanning e-commerce, agri-tech, edtech, and SaaS products. Throughout my work, I've collaborated with fellow engineers and product designers to bring these experiences to life. It's been a wild ride, but an incredibly rewarding one!`}
-        </p>
-        <p>
-          {`When I'm not writing code, you'll find me either listening to music, writing (usually unpublished rants and or poems 🙃), or visiting family.`}
-        </p>
+        {aboutMeData.brief.map((item, index) => (
+          <p key={index}>{item}</p>
+        ))}
       </Section>
 
       <Section className="">
@@ -109,7 +106,7 @@ const Works: NextPage = () => {
             </div>
             <div id="education">
               <h3 className="text- text-bold mt-10 text-2xl font-medium text-blue md:text-left">
-                Education 🎓{' '}
+                Education 🎓
               </h3>
               <div className="space-y-4">
                 {aboutMeData.education.map(item => (
@@ -126,7 +123,7 @@ const Works: NextPage = () => {
             </div>
             <div id="Courses">
               <h3 className="text- text-bold mt-10 text-2xl font-medium text-blue md:text-left">
-                Professional Courses🎓{' '}
+                Professional Courses 📄
               </h3>
               <div className="space-y-4">
                 {aboutMeData.courses.map((item, index) => (
@@ -144,7 +141,7 @@ const Works: NextPage = () => {
           <div className="mt-10 w-full sm:mt-0 md:w-1/2">
             <div id="Skills">
               <h3 className="text- text-bold text-2xl font-medium text-blue md:text-left">
-                Skills 👨🏾‍💻
+                Skills 🪄
               </h3>
               <div className="space-y-4">
                 {aboutMeData.skills.map((item, index) => (
