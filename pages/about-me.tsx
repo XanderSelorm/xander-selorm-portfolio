@@ -85,9 +85,9 @@ const Works: NextPage = () => {
 
       <Section className="">
         <div className="grid w-full gap-5 md:grid-cols-2">
-          <div className="w-full space-y-8 text-start">
+          <div className="w-full space-y-10 text-start">
             <div id="experience" className="space-y-4">
-              <h3 className="text-bold text-2xl font-medium text-blue md:text-left">
+              <h3 className="text-2xl font-medium text-blue md:text-left">
                 Work experience 💼
               </h3>
               <div className="space-y-4">
@@ -96,10 +96,10 @@ const Works: NextPage = () => {
                     <p className="py-1 text-left text-lg font-medium text-blue md:text-left">
                       {item.workType}
                     </p>
-                    <p className="text-gray py-1 text-left text-lg md:text-left">
+                    <p className="py-1 text-left text-lg font-light text-blue md:text-left">
                       {item.title}
                     </p>
-                    <p className="text-gray py-1 text-left text-sm md:text-left">
+                    <p className="py-1 text-left text-sm text-blue md:text-left">
                       {item.duration}
                     </p>
                   </div>
@@ -107,16 +107,16 @@ const Works: NextPage = () => {
               </div>
             </div>
             <div id="education" className="space-y-4">
-              <h3 className="text-bold text-2xl font-medium text-blue md:text-left">
+              <h3 className="text-2xl font-medium text-blue md:text-left">
                 Education 🎓
               </h3>
               <div className="space-y-4">
                 {aboutMeData.education.map(item => (
                   <div key={item.programme}>
-                    <p className="py-1 text-left text-lg font-medium text-blue md:text-left">
+                    <p className="py-1 text-left text-lg text-blue md:text-left">
                       {item.schoolName}
                     </p>
-                    <p className="text-gray py-1 text-left text-lg md:text-left">
+                    <p className="py-1 text-left text-lg font-light text-blue md:text-left">
                       {item.programme}
                     </p>
                   </div>
@@ -124,14 +124,14 @@ const Works: NextPage = () => {
               </div>
             </div>
             <div id="Courses" className="space-y-4">
-              <h3 className="text-bold text-2xl font-medium text-blue md:text-left">
+              <h3 className="text-2xl font-medium text-blue md:text-left">
                 Professional Courses 📄
               </h3>
               <div className="space-y-4">
                 {aboutMeData.certifications.map((item, index) => (
                   <div key={item.title}>
                     <Link href={item.link ?? ''}>
-                      <p className="py-1 text-left text-lg font-medium text-blue md:text-left">
+                      <p className="py-1 text-left text-lg text-blue md:text-left">
                         {item.title}
                       </p>
                     </Link>
@@ -140,9 +140,9 @@ const Works: NextPage = () => {
               </div>
             </div>
           </div>
-          <div className="w-full space-y-8 text-start">
+          <div className="w-full space-y-10 text-start">
             <div id="Skills" className="space-y-4">
-              <h3 className="text-bold text-2xl font-medium text-blue md:text-left">
+              <h3 className="text-2xl font-medium text-blue md:text-left">
                 Skills 🪄
               </h3>
               <div className="space-y-4">
@@ -155,7 +155,7 @@ const Works: NextPage = () => {
               </div>
             </div>
             <div id="Tech">
-              <h3 className="text-bold text-2xl font-medium text-blue md:text-left">
+              <h3 className="text-2xl font-medium text-blue md:text-left">
                 Tech Stacks 👨🏾‍💻
               </h3>
               <div className="space-y-4">
