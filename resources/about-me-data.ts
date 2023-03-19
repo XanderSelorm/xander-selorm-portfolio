@@ -37,7 +37,7 @@ const aboutMeData: AboutMeData = {
             programme: "BSc. Information and Communication Technology",
         }
     ],
-    skills: [""],
+    skills: [],
     certifications: [
         {
             title: "Android Development Certificate, Google Africa Developer Training Program",
@@ -48,7 +48,20 @@ const aboutMeData: AboutMeData = {
             link: ""
         }
     ],
-    techStacks: [""],
+    techStacks: [
+        "React JS",
+        "Next JS",
+        "JavaScript/TypeScript",
+        "Material UI",
+        "TailWind CSS",
+        "Bootstrap",
+        "Dart/Flutter",
+        "C#/Blazor",
+        "MySQL",
+        "SQLite",
+        "Firebase/NoSql",
+        "Supabase/PostgreSql"
+    ],
 }
 
 export default aboutMeData;

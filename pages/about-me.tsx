@@ -96,14 +96,46 @@ const Works: NextPage = () => {
                     <p className="py-1 text-left text-lg font-medium text-blue md:text-left">
                       {item.workType}
                     </p>
-                    <p className="py-1 text-left text-lg font-light text-blue md:text-left">
+                    <p className="py-1 text-left text-lg font-light md:text-left">
                       {item.title}
                     </p>
-                    <p className="py-1 text-left text-sm text-blue md:text-left">
+                    <p className="py-1 text-left text-sm md:text-left">
                       {item.duration}
                     </p>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+          <div className="w-full space-y-10 text-start">
+            {/* <div id="Skills" className="space-y-4">
+              <h3 className="text-2xl font-medium text-blue md:text-left">
+                Skills 🪄
+              </h3>
+              <div className="space-y-4">
+                <p>
+                  {aboutMeData.skills.map((item, index) => (
+                    <span key={index}>
+                      {item}
+                      {' || '}
+                    </span>
+                  ))}
+                </p>
+              </div>
+            </div> */}
+            <div id="Tech">
+              <h3 className="text-2xl font-medium text-blue md:text-left">
+                Tech Stacks 👨🏾‍💻
+              </h3>
+              <div className="space-y-4">
+                <p>
+                  {aboutMeData.techStacks.map((item, index) => (
+                    <span key={index}>
+                      {item}
+                      {' || '}
+                    </span>
+                  ))}
+                </p>
               </div>
             </div>
             <div id="education" className="space-y-4">
@@ -116,7 +148,7 @@ const Works: NextPage = () => {
                     <p className="py-1 text-left text-lg text-blue md:text-left">
                       {item.schoolName}
                     </p>
-                    <p className="py-1 text-left text-lg font-light text-blue md:text-left">
+                    <p className="py-1 text-left text-lg font-light md:text-left">
                       {item.programme}
                     </p>
                   </div>
@@ -131,39 +163,11 @@ const Works: NextPage = () => {
                 {aboutMeData.certifications.map((item, index) => (
                   <div key={item.title}>
                     <Link href={item.link ?? ''}>
-                      <p className="py-1 text-left text-lg text-blue md:text-left">
+                      <p className="py-1 text-left text-lg md:text-left">
                         {item.title}
                       </p>
                     </Link>
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="w-full space-y-10 text-start">
-            <div id="Skills" className="space-y-4">
-              <h3 className="text-2xl font-medium text-blue md:text-left">
-                Skills 🪄
-              </h3>
-              <div className="space-y-4">
-                {aboutMeData.skills.map((item, index) => (
-                  <p key={index}>
-                    {item}
-                    {index !== aboutMeData.skills.length - 1 && ' | '}
-                  </p>
-                ))}
-              </div>
-            </div>
-            <div id="Tech">
-              <h3 className="text-2xl font-medium text-blue md:text-left">
-                Tech Stacks 👨🏾‍💻
-              </h3>
-              <div className="space-y-4">
-                {aboutMeData.techStacks.map((item, index) => (
-                  <p key={index}>
-                    {item}
-                    {index !== aboutMeData.skills.length - 1 && ' | '}
-                  </p>
                 ))}
               </div>
             </div>
