@@ -2,8 +2,6 @@ import Hero from 'components/hero';
 import Layout from 'components/Layout';
 import ProjectCard from 'components/projectCard';
 import Section from 'components/section';
-import VolunteerCard from 'components/volunteerCard';
-import WorkCard from 'components/workCard';
 import type { NextPage } from 'next';
 import Link from 'next/link';
 import projectsData from 'resources/projects-data';

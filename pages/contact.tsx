@@ -1,15 +1,7 @@
 /* eslint-disable jsx-a11y/alt-text */
-import Hero from 'components/hero';
 import Layout from 'components/Layout';
-import ProjectCard from 'components/projectCard';
 import Section from 'components/section';
-import VolunteerCard from 'components/volunteerCard';
-import WorkCard from 'components/workCard';
 import type { NextPage } from 'next';
-import projectsData from 'resources/projects-data';
-import Image from 'next/image';
-import aboutMeData from 'resources/about-me-data';
-import Link from 'next/link';
 
 const Contact: NextPage = () => {
   return (
