@@ -39,8 +39,9 @@ const Home: NextPage = () => {
               title={item.name}
               description={item.description}
               imgSrc={item.image}
-              link={item.url}
+              link={item.page ?? item.url}
               stack={item.stack}
+              linkText={item.linkText}
             />
           ))}
         </div>

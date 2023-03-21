@@ -19,6 +19,7 @@ const navItems = [
   {
     label: 'Blog',
     link: 'https://dev.to/xanderselorm',
+    target: '_blank',
   },
   {
     label: 'Get in touch',
@@ -53,15 +54,17 @@ const Navbar = () => {
 
             <ul className="flex items-center gap-10 text-sm">
               {navItems.map(navItem => (
-                <Link key={navItem.link} href={navItem.link}>
-                  <li
-                    className={`cursor-pointer text-white transition hover:text-yellow ${
-                      router.asPath == navItem.link ? 'text-yellow' : ''
-                    }`}
-                  >
-                    <div>{navItem.label}</div>
-                  </li>
-                </Link>
+                <li
+                  key={navItem.link}
+                  className={`cursor-pointer transition hover:text-yellow ${
+                    router.asPath == navItem.link ? 'text-yellow' : ''
+                  }`}
+                >
+                  {' '}
+                  <Link href={navItem.link} passHref>
+                    <a target={navItem.target}>{navItem.label}</a>
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>
@@ -103,7 +106,9 @@ const Navbar = () => {
                         router.asPath == navItem.link ? 'text-yellow' : ''
                       }`}
                     >
-                      <Link href={navItem.link}>{navItem.label}</Link>
+                      <Link href={navItem.link} target={navItem.target}>
+                        {navItem.label}
+                      </Link>
                     </li>
                   ))}
                 </ul>

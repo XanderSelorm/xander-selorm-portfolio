@@ -18,24 +18,36 @@ const Footer = () => {
 
             <ul className="flex justify-center space-x-3">
               <li className="cursor-pointer">
-                <Link href="mailto:xanderselorm@gmail.com">
-                  <FaGoogle className="rounded-lg text-2xl" />
+                <Link
+                  href="mailto:xanderselorm@gmail.com"
+                  passHref
+                  target="_blank"
+                >
+                  <a target="_blank">
+                    <FaGoogle className="rounded-lg text-2xl" />
+                  </a>
                 </Link>
               </li>
               <li className="cursor-pointer">
                 <Link
                   href="https://www.linkedin.com/in/XanderSelorm/"
+                  passHref
                   target="_blank"
                 >
-                  <FaLinkedin className="rounded-lg text-2xl" />
+                  <a target="_blank">
+                    <FaLinkedin className="rounded-lg text-2xl" />
+                  </a>
                 </Link>
               </li>
               <li className="cursor-pointer">
                 <Link
                   href="https://www.twitter.com/XanderSelorm/"
+                  passHref
                   target="_blank"
                 >
-                  <FaTwitterSquare className="rounded-lg text-2xl" />
+                  <a target="_blank">
+                    <FaTwitterSquare className="rounded-lg text-2xl" />
+                  </a>
                 </Link>
               </li>
               <li className="cursor-pointer">
@@ -43,22 +55,27 @@ const Footer = () => {
                   href="https://www.facebook.com/XanderSelorm/"
                   target="_blank"
                 >
-                  <FaFacebookSquare className="rounded-lg text-2xl" />
+                  <a target="_blank">
+                    <FaFacebookSquare className="rounded-lg text-2xl" />
+                  </a>
                 </Link>
               </li>
               <li className="cursor-pointer">
                 <Link
                   href="https://www.instagram.com/xanderselorm/"
+                  passHref
                   target="_blank"
                 >
-                  <FaInstagram className="rounded-lg text-2xl" />
+                  <a target="_blank">
+                    <FaInstagram className="rounded-lg text-2xl" />
+                  </a>
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <Link href="mailto:xanderselorm@gmail.com">
-              <a className="btn btn-solid">{`Get in touch`}</a>
+            <Link href="mailto:xanderselorm@gmail.com" passHref target="_blank">
+              <a className="btn btn-solid" target="_blank">{`Get in touch`}</a>
             </Link>
           </div>
 

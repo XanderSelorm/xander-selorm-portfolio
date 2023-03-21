@@ -1,3 +1,14 @@
+export interface IProject {
+    id: string;
+    name: string;
+    url: string | null;
+    description: string;
+    image: string;
+    stack: string;
+    linkText?: string;
+    page?: string;
+}
+
 export interface AboutMeData {
     brief: string[];
     workExperience: WorkExperience[];

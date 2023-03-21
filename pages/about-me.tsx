@@ -88,7 +88,7 @@ const Works: NextPage = () => {
               </h3>
               <div className="space-y-4">
                 {aboutMeData.workExperience.map(item => (
-                  <div key={item.title}>
+                  <div key={item.workType}>
                     <p className="py-1 text-left text-lg font-medium text-blue md:text-left">
                       {item.workType}
                     </p>

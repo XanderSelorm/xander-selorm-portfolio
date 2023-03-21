@@ -9,6 +9,7 @@ interface Props {
   description: string;
   link: string | null;
   stack: string;
+  linkText?: string;
 }
 
 const ProjectCard = (props: Props) => {
@@ -31,7 +32,7 @@ const ProjectCard = (props: Props) => {
           {props.link ? (
             <Link href={props.link}>
               <div className="flex cursor-pointer flex-nowrap items-center space-x-2">
-                <div>See more</div> <FiArrowUpRight />
+                <div>{props.linkText ?? 'See more'}</div> <FiArrowUpRight />
               </div>
             </Link>
           ) : (
