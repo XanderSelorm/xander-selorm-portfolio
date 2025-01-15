@@ -4,7 +4,7 @@ const projectsData: IProject[] = [
   {
     id: 'vizitors-log',
     name: 'Maintaining a record of all the visitors in the workplace',
-    url: 'https://www.vizitorslog.com',
+    url: 'https://www.vizitorslog.app/',
     description: `Vizitorslog streamlines the process of screening, validating, and monitoring individuals/customers across all your business locations, while ensuring compliance with privacy and safety regulations.`,
     image: '/imgs/vizitors-log-project.png',
     stack: 'React JS | TypeScript | TailwindCSS',
@@ -34,8 +34,8 @@ const projectsData: IProject[] = [
   {
     id: 'treesyt',
     name: 'Treesyt Website & Dashboard',
-    url: null,
-    description: 'An innovative agri-tech platform',
+    url: 'https://www.treesyt.com',
+    description: 'An innovative proprietary agri-tech platform',
     image: '/imgs/treesyt-project.png',
     stack: 'NextJS | TypeScript | TailwindCSS',
   },
@@ -52,7 +52,7 @@ const projectsData: IProject[] = [
   {
     id: 'devspool',
     name: 'Bye bye to sending job application emails!',
-    url: null,
+    url: 'https://devspool.scynett.com/',
     description:
       'A platform to help streamline the recruiting process for Human Resource Managers and applicants seeking to join Scynett.',
     image: '/imgs/devs-pool-project.png',

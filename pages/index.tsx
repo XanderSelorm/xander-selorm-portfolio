@@ -3,7 +3,6 @@ import Layout from 'components/Layout';
 import ProjectCard from 'components/projectCard';
 import Section from 'components/section';
 import type { NextPage } from 'next';
-import Link from 'next/link';
 import projectsData from 'resources/projects-data';
 
 const Home: NextPage = () => {
@@ -17,20 +16,19 @@ const Home: NextPage = () => {
           </h1>
 
           <p className="text-2xl sm:leading-relaxed">
-            I implement designs and experiences you tend to have when
-            interacting with digital products such as websites, web apps and
-            mobile applications. I am currently a software engineer at{' '}
-            <Link href={'https://scynett.com/'} target="_blank">
-              <a className="text-yellow hover:underline"> Scynett GmbH</a>
-            </Link>
-            .
+            I am a self-motivated and independent Frontend Engineer with
+            extensive experience building high-traffic frontend web applications
+            and leading development teams. Proven track record of architecting
+            scalable solutions and driving technical initiatives. I specialize
+            in creating intuitive user interfaces and implementing complex
+            features for enterprise applications.
           </p>
         </>
       </Hero>
 
       {/* <!-- Projects --> */}
       <Section>
-        <h1 className="text-3xl font-bold text-blue">Featured Projects</h1>
+        <h1 className="text-3xl font-bold text-blue">Featured Works</h1>
 
         <div className="w-full space-y-10">
           {projectsData.map(item => (
