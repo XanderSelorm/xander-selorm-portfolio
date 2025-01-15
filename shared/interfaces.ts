@@ -10,12 +10,12 @@ export interface IProject {
 }
 
 export interface AboutMeData {
-    brief: string[];
-    workExperience: WorkExperience[];
-    education: Education[];
-    skills: string[];
-    certifications: Course[];
-    techStacks: string[];
+  brief: string[];
+  workExperience: WorkExperience[];
+  education: Education[];
+  skills: string[];
+  certifications: Course[];
+  tools: string[];
 }
 
 export interface WorkExperience {

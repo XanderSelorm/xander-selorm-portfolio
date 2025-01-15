@@ -18,7 +18,7 @@ const Works: NextPage = () => {
                 <Image
                   priority
                   className=" top-0 bg-top"
-                  src="/imgs/about-portrait-mask.png"
+                  src="/imgs/about-portrait-mask-bw.png"
                   alt=""
                   width="100%"
                   height="100%"
@@ -27,39 +27,39 @@ const Works: NextPage = () => {
                 />
               </div>
               <div className="flex flex-col space-y-5 p-8 pt-0 text-start">
-                <h4 className="text-4xl font-bold">
+                <h4 className="text-5xl font-bold leading-normal">
                   Alexander
                   <br />
                   Selorm Kubi
                 </h4>
 
-                <p className="text-lg text-yellow">
+                {/* <p className="text-lg text-yellow">
                   Software Developer
                   <br />
                   based in Ghana 🇬🇭
-                </p>
+                </p> */}
               </div>
             </div>
 
             <div className="hidden h-full w-full flex-nowrap bg-blue bg-opacity-95 sm:flex">
               <div className="flex w-1/2 flex-col justify-center space-y-5 p-8 pr-0 text-start">
-                <h4 className="text-5xl font-bold">
+                <h4 className="text-5xl font-bold leading-normal">
                   Alexander
                   <br />
                   Selorm Kubi
                 </h4>
 
-                <p className="text-lg text-yellow">
+                {/* <p className="text-lg text-yellow">
                   Software Developer
                   <br />
                   based in Ghana 🇬🇭
-                </p>
+                </p> */}
               </div>
               <div className="relative h-full w-1/2">
                 <Image
                   priority
                   className=" top-0 bg-top"
-                  src="/imgs/about-landscape-mask.png"
+                  src="/imgs/about-landscape-mask-bw.png"
                   alt=""
                   width="100%"
                   height="100%"
@@ -119,16 +119,17 @@ const Works: NextPage = () => {
                 </p>
               </div>
             </div> */}
-            <div id="Tech">
+            <div id="Tech" className="space-y-4">
               <h3 className="text-2xl font-medium text-blue md:text-left">
-                Tech Stacks 👨🏾‍💻
+                Tools 👨🏾‍💻
               </h3>
               <div className="space-y-4">
-                <p>
-                  {aboutMeData.techStacks.map((item, index) => (
+                <p className="leading-7">
+                  {aboutMeData.tools.map((item, index) => (
                     <span key={index}>
+                      {index === aboutMeData.tools.length - 1 && ' and '}
                       {item}
-                      {' || '}
+                      {index !== aboutMeData.tools.length - 1 && ', '}
                     </span>
                   ))}
                 </p>
@@ -159,7 +160,7 @@ const Works: NextPage = () => {
                 {aboutMeData.certifications.map((item, index) => (
                   <div key={item.title}>
                     <Link href={item.link ?? ''}>
-                      <p className="py-1 text-left text-lg md:text-left">
+                      <p className="py-1 text-left text-lg font-light md:text-left">
                         {item.title}
                       </p>
                     </Link>
