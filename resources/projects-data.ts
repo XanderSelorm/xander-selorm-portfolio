@@ -2,6 +2,15 @@ import { IProject } from "shared/interfaces";
 
 const projectsData: IProject[] = [
   {
+    id: '1m1s-express',
+    name: 'Experience seamless transportation at your fingertips',
+    url: 'https://www.1m1sexpress.com/',
+    description: `With 1M1S Express, ride-hailing becomes reliable for your convenience. Whether you need a quick ride, want to schedule one ahead of time, or track your trips in real-time, 1M1S Express has you covered`,
+    image: '/imgs/1m1s.png',
+    stack: 'NextJS | TypeScript | TailwindCSS',
+    // page: '/projects/1m1s-express',
+  },
+  {
     id: 'vizitors-log',
     name: 'Maintaining a record of all the visitors in the workplace',
     url: 'https://www.vizitorslog.app/',
