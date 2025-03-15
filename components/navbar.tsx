@@ -1,10 +1,11 @@
-import { MouseEvent, Fragment, useRef, useState } from 'react';
+import { MouseEvent, Fragment, useRef, useState, useEffect } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaBars } from 'react-icons/fa';
 import React from 'react';
 import { useRouter } from 'next/router';
+import { cn } from 'lib/utils';
 
 const navItems = [
   {
@@ -29,11 +30,27 @@ const navItems = [
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const router = useRouter();
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
-    <nav className="sticky top-0 z-50 w-full bg-blue py-3 text-white">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:px-6 lg:px-8">
+    <nav className={cn(`fixed top-0 z-50 w-full py-3 text-white`, scrolled ? 'bg-linear-to-b from-primary' : '')}>
+      <div className="w-full flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link className="block" href="/">
           <div className="w-100 h-50 relative cursor-pointer">
             <Image
@@ -56,8 +73,7 @@ const Navbar = () => {
               {navItems.map(navItem => (
                 <li
                   key={navItem.link}
-                  className={`cursor-pointer transition hover:text-yellow ${
-                    router.asPath == navItem.link ? 'text-yellow' : ''
+                  className={`cursor-pointer transition hover:text-secondary ${router.asPath == navItem.link ? 'text-secondary' : ''
                   }`}
                 >
                   {' '}
@@ -103,7 +119,7 @@ const Navbar = () => {
                     <li
                       key={navItem.label}
                       className={` text-gray-500 transition hover:text-gray-500/75 ${
-                        router.asPath == navItem.link ? 'text-yellow' : ''
+                        router.asPath == navItem.link ? 'text-secondary' : ''
                       }`}
                     >
                       <Link href={navItem.link} target={navItem.target}>

@@ -16,7 +16,7 @@ const ProjectCard = (props: Props) => {
   return (
     <div className="flex flex-col items-center space-y-4 py-8 sm:items-start md:px-0">
       <section
-        className={`relative h-60 w-full overflow-clip rounded-lg bg-blue text-white`}
+        className={`relative h-60 w-full overflow-clip rounded-lg bg-primary text-white`}
       >
         <Image src={props.imgSrc} alt="" layout="fill" objectFit="cover" />
       </section>
@@ -28,7 +28,7 @@ const ProjectCard = (props: Props) => {
 
         <p className="text-lg sm:leading-relaxed">{props.description}</p>
 
-        <div className="flex w-fit flex-wrap text-center text-lg font-semibold hover:text-blue hover:underline">
+        <div className="flex w-fit flex-wrap text-center text-lg font-semibold hover:text-secondary hover:underline">
           {props.link ? (
             <Link href={props.link}>
               <div className="flex cursor-pointer flex-nowrap items-center space-x-2">
@@ -36,7 +36,7 @@ const ProjectCard = (props: Props) => {
               </div>
             </Link>
           ) : (
-            <p className="text-blue">Coming Soon</p>
+              <p className="text-primary">Coming Soon</p>
           )}
         </div>
       </div>

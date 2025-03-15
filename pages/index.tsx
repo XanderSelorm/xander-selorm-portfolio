@@ -1,5 +1,6 @@
 import Hero from 'components/hero';
 import Layout from 'components/Layout';
+import MouseAnimation from 'components/mouse-animation';
 import ProjectCard from 'components/projectCard';
 import Section from 'components/section';
 import type { NextPage } from 'next';
@@ -10,25 +11,28 @@ const Home: NextPage = () => {
     <Layout title="Home">
       {/* <!-- Hero --> */}
       <Hero>
-        <>
-          <h1 className="text-3xl font-extrabold sm:text-5xl">
-            {'I’m Selorm, a software developer👨🏾‍💻 based in Ghana 🇬🇭'}
+        <h1 id="my-name" className="text-3xl font-extrabold sm:text-6xl text-center w-full jost_font">
+          ALEXANDER SELORM KUBI
           </h1>
 
-          <p className="text-2xl sm:leading-relaxed">
-            I am a self-motivated and independent Frontend Engineer with
-            extensive experience building high-traffic frontend web applications
-            and leading development teams. Proven track record of architecting
-            scalable solutions and driving technical initiatives. I specialize
-            in creating intuitive user interfaces and implementing complex
-            features for enterprise applications.
-          </p>
-        </>
+        <h4 id='job-title' className="text-lg text-center w-full">
+          FRONTEND ENGINEER
+        </h4>
       </Hero>
+
+      <Section>
+        <p>I am a self-motivated and independent Frontend Engineer with
+          extensive experience building high-traffic frontend web applications
+          and leading development teams. With a proven track record of architecting
+          scalable solutions and driving technical initiatives, I have specialized
+          in creating intuitive user interfaces and implementing complex
+          features for enterprise applications for almost <strong>{new Date().getFullYear() - 2020} years</strong>.</p>
+        <p>Currently, I work as a Frontend Engineer in Ghana, West Africa.</p>
+      </Section>
 
       {/* <!-- Projects --> */}
       <Section>
-        <h1 className="text-3xl font-bold text-blue">Featured Works</h1>
+        <h1 className="text-3xl font-bold">Featured Works</h1>
 
         <div className="w-full space-y-10">
           {projectsData.map(item => (

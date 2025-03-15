@@ -19,7 +19,7 @@ const ProjectDetails: NextPage<Props> = (props: Props) => {
       <Hero>
         <>
           <section
-            className={`relative h-60 w-full overflow-clip rounded-lg bg-blue text-white`}
+            className={`relative h-60 w-full overflow-clip rounded-lg bg-primary text-white`}
           >
             <Image
               src={props.project.image}
@@ -33,13 +33,13 @@ const ProjectDetails: NextPage<Props> = (props: Props) => {
 
       {/* <!-- Projects --> */}
       <Section>
-        <h1 className="text-3xl font-bold text-blue">{props.project.name}</h1>
+        <h1 className="text-3xl font-bold text-primary">{props.project.name}</h1>
 
         <div className="w-full space-y-10">
           <p>{props.project.description}</p>
         </div>
 
-        <div className="flex w-fit flex-wrap text-center text-lg font-semibold hover:text-blue hover:underline">
+        <div className="flex w-fit flex-wrap text-center text-lg font-semibold hover:text-primary hover:underline">
           {props.project.url ? (
             <Link href={props.project.url} target="_blank">
               <div className="flex cursor-pointer flex-nowrap items-center space-x-2">
@@ -48,7 +48,7 @@ const ProjectDetails: NextPage<Props> = (props: Props) => {
               </div>
             </Link>
           ) : (
-            <p className="text-blue">Coming Soon</p>
+              <p className="text-primary">Coming Soon</p>
           )}
         </div>
       </Section>

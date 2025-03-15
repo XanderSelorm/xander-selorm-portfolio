@@ -1,31 +1,32 @@
+import { cn } from 'lib/utils';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 
 interface IProps {
   children: ReactNode;
   isFullWidth?: boolean;
+  hasInnerContainerWidth?: boolean;
   innerContainerWidth?: number;
+  isContentCentered?: boolean;
   className?: string;
 }
 
 const Section = ({
   children,
   innerContainerWidth,
+  hasInnerContainerWidth = true,
   className = '',
   isFullWidth = false,
+  isContentCentered = false,
 }: IProps) => {
   return (
     <section
-      className={`flex ${
-        !isFullWidth ? 'w-full max-w-4xl' : 'w-full'
-      } h-auto flex-col items-center py-14 px-4 sm:px-0 ${className}`}
+      className={cn(`flex h-auto flex-col items-center py-14 px-4 sm:px-0`, !isFullWidth ? 'w-full max-w-4xl' : 'w-full', className)}
     >
       <div
-        className={`mx-auto flex ${
-          !innerContainerWidth
-            ? 'w-full max-w-4xl'
-            : innerContainerWidth ?? 'w-full'
-        } sm:px-0" h-auto flex-col items-center justify-center space-y-4 px-4 text-center md:items-start md:text-start`}
+        className={cn(`mx-auto flex sm:px-0" h-full flex-col items-center justify-center space-y-4 text-center `, !isContentCentered && 'md:items-start md:text-start', hasInnerContainerWidth && !innerContainerWidth
+          ? 'w-full max-w-4xl px-4 '
+          : innerContainerWidth ?? 'w-full')}
       >
         {children}
       </div>

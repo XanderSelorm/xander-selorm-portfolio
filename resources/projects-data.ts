@@ -2,6 +2,14 @@ import { IProject } from "shared/interfaces";
 
 const projectsData: IProject[] = [
   {
+    id: 'treesyt',
+    name: 'Treesyt Website & Dashboard',
+    url: 'https://www.treesyt.com',
+    description: 'An innovative proprietary agri-tech platform',
+    image: '/imgs/treesyt-project.png',
+    stack: 'NextJS | TypeScript | TailwindCSS',
+  },
+  {
     id: '1m1s-express',
     name: 'Experience seamless transportation at your fingertips',
     url: 'https://www.1m1sexpress.com/',
@@ -11,6 +19,15 @@ const projectsData: IProject[] = [
     // page: '/projects/1m1s-express',
   },
   {
+    id: 'devspool',
+    name: 'Bye bye to sending job application emails!',
+    url: 'https://devspool.scynett.com/',
+    description:
+      'A platform to help streamline the recruiting process for Human Resource Managers and applicants seeking to join Scynett.',
+    image: '/imgs/devs-pool-project.png',
+    stack: 'React JS | TypeScript | TailwindCSS',
+  },
+  {
     id: 'vizitors-log',
     name: 'Maintaining a record of all the visitors in the workplace',
     url: 'https://www.vizitorslog.app/',
@@ -18,17 +35,6 @@ const projectsData: IProject[] = [
     image: '/imgs/vizitors-log-project.png',
     stack: 'React JS | TypeScript | TailwindCSS',
     page: '/projects/vizitors-log',
-  },
-  {
-    id: 'tailors-note',
-    name: 'A productivity tool for the modern day couture',
-    url: 'https://www.tailorsnote.com',
-    page: '/projects/tailors-note',
-    description:
-      "Tailorsnote offers a novel solution for fashion designers to efficiently manage measurement details, tasks, and customers' data and communications.",
-    image: '/imgs/tailors-note-project.png',
-    stack: 'Flutter | Firebase | HTML/CSS',
-    // linkText:""
   },
   {
     id: 'urcook',
@@ -41,12 +47,15 @@ const projectsData: IProject[] = [
     page: '/projects/urcook',
   },
   {
-    id: 'treesyt',
-    name: 'Treesyt Website & Dashboard',
-    url: 'https://www.treesyt.com',
-    description: 'An innovative proprietary agri-tech platform',
-    image: '/imgs/treesyt-project.png',
-    stack: 'NextJS | TypeScript | TailwindCSS',
+    id: 'tailors-note',
+    name: 'A productivity tool for the modern day couture',
+    url: 'https://www.tailorsnote.com',
+    page: '/projects/tailors-note',
+    description:
+      "Tailorsnote offers a novel solution for fashion designers to efficiently manage measurement details, tasks, and customers' data and communications.",
+    image: '/imgs/tailors-note-project.png',
+    stack: 'Flutter | Firebase | HTML/CSS',
+    // linkText:""
   },
   //   {
   //     id: 'tbd',
@@ -58,15 +67,6 @@ const projectsData: IProject[] = [
   //     stack: 'React JS | Firebase',
   //     page: '/projects/tbd',
   //   },
-  {
-    id: 'devspool',
-    name: 'Bye bye to sending job application emails!',
-    url: 'https://devspool.scynett.com/',
-    description:
-      'A platform to help streamline the recruiting process for Human Resource Managers and applicants seeking to join Scynett.',
-    image: '/imgs/devs-pool-project.png',
-    stack: 'React JS | TypeScript | TailwindCSS',
-  },
 ];
 
 export default projectsData;

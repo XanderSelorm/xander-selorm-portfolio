@@ -7,7 +7,7 @@ const Contact: NextPage = () => {
   return (
     <Layout title="Contact Me">
       <Section
-        className="h-[44vh] bg-blue pt-48 text-center text-white"
+        className="h-[44vh] bg-primary pt-48 text-center text-white"
         isFullWidth
       >
         <div className="flex w-full flex-col items-center space-y-5">
@@ -21,25 +21,25 @@ const Contact: NextPage = () => {
         {/* <div className="mt-16 flex w-full items-center justify-center">
           <a
             href="mailto:derrickamenuve@gmail.com"
-            className="font-regular py-2 pr-10 text-3xl text-yellow hover:underline"
+            className="font-regular py-2 pr-10 text-3xl text-secondary hover:underline"
           >
             Email
           </a>
           <a
             href="https://www.linkedin.com/in/derrickamenuve/"
-            className="font-regular py-2 pr-10 text-3xl text-yellow hover:underline"
+            className="font-regular py-2 pr-10 text-3xl text-secondary hover:underline"
           >
             LinkedIn
           </a>
           <a
             href="https://www.twitter.com/godsloveady/"
-            className="font-regular py-2 pr-10 text-3xl text-yellow hover:underline"
+            className="font-regular py-2 pr-10 text-3xl text-secondary hover:underline"
           >
             Twitter
           </a>
           <a
             href="https://instagram.com/godsloveady"
-            className="font-regular py-2 pr-10 text-3xl text-yellow hover:underline"
+            className="font-regular py-2 pr-10 text-3xl text-secondary hover:underline"
           >
             Instagram
           </a>

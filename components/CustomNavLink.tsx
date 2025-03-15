@@ -12,7 +12,7 @@ const CustomNavLink = (props: Props) => {
    return (
      <Link className="" href={props.to} target={props.target}>
        <div
-         className={`text-blue-dark hover:text-green cursor-pointer transition ${
+         className={`text-primary-dark hover:text-green cursor-pointer transition ${
            props.to === router.pathname && 'text-green'
          }`}
        >

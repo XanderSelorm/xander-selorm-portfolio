@@ -14,7 +14,7 @@ const Layout = (props: Props) => {
   const router = useRouter();
 
   return (
-    <div className="inter_font text-blue-dark relative flex flex-col items-center bg-[#eef7ff]">
+    <div className="inter_font text-primary-dark relative flex flex-col items-center">
       <Script
         async
         strategy="lazyOnload"
