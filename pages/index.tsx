@@ -10,7 +10,7 @@ const Home: NextPage = () => {
   return (
     <Layout title="Home">
       {/* <!-- Hero --> */}
-      <Hero>
+      <Hero showMouseAnimation>
         <h1 id="my-name" className="text-3xl font-extrabold sm:text-6xl text-center w-full jost_font">
           ALEXANDER SELORM KUBI
           </h1>

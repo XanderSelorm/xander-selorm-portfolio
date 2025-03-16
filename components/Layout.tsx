@@ -7,7 +7,7 @@ import Navbar from './navbar';
 
 interface Props {
   title: string;
-  children: ReactNode | ReactNode[];
+  children?: ReactNode | ReactNode[];
 }
 
 const Layout = (props: Props) => {

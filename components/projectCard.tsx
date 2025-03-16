@@ -14,7 +14,7 @@ interface Props {
 
 const ProjectCard = (props: Props) => {
   return (
-    <div className="flex flex-col items-center space-y-4 py-8 sm:items-start md:px-0">
+    <div className="flex flex-col items-center space-y-4 py-8 sm:items-start md:px-0 w-fill">
       <section
         className={`relative h-60 w-full overflow-clip rounded-lg bg-primary text-white`}
       >

@@ -13,10 +13,13 @@ const navItems = [
     link: '/',
   },
   {
+    label: 'Projects',
+    link: '/projects',
+  },
+  {
     label: 'About Me',
     link: '/about-me',
   },
-
   {
     label: 'Blog',
     link: 'https://dev.to/xanderselorm',
@@ -49,7 +52,7 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={cn(`fixed top-0 z-50 w-full py-3 text-white`, scrolled ? 'bg-linear-to-b from-primary' : '')}>
+    <nav className={cn(`fixed top-0 z-50 w-full py-3 text-white`, scrolled ? 'bg-gradient-to-b from-primary' : '')}>
       <div className="w-full flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link className="block" href="/">
           <div className="w-100 h-50 relative cursor-pointer">

@@ -11,11 +11,11 @@ import SectionWithBgImage from './section-with-bg';
 
 const Footer = () => {
   return (
-    <SectionWithBgImage>
+    <SectionWithBgImage bgImagePath='/imgs/patterned-bg.png'>
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-center px-4 sm:px-6 lg:px-8">
         <div className="my-8 flex w-full flex-col items-center space-y-8">
           <div className="flex flex-1 flex-col space-y-5 text-center sm:text-start">
-            <h4 className="text-center text-3xl">{`Let's Connect`}</h4>
+            <h4 className="text-center text-3xl">{`Let's Connect!`}</h4>
 
             <ul className="flex justify-center space-x-3">
               <li className="cursor-pointer">
