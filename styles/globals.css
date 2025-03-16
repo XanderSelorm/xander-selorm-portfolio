@@ -118,6 +118,12 @@
     width: fill-available;
   }
 
+  .h-fill {
+    height: -moz-available;
+    height: -webkit-fill-available;
+    height: fill-available;
+  }
+
   #my-name {
     background: linear-gradient(90deg, var(--secondary), #fefefe);
     -webkit-background-clip: text;
@@ -143,15 +149,15 @@
     transform: translateX(-50%);
   }
 
-    @keyframes wheel {
-      0% {
-        transform: translateX(-50%) translateY(0);
-        opacity: 1;
-      }
-  
-      100% {
-        transform: translateX(-50%) translateY(10px);
-        opacity: 0;
-      }
+  @keyframes wheel {
+    0% {
+      transform: translateX(-50%) translateY(0);
+      opacity: 1;
     }
+
+    100% {
+      transform: translateX(-50%) translateY(10px);
+      opacity: 0;
+    }
+  }
 }

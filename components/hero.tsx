@@ -17,7 +17,7 @@ const Hero: FunctionComponent<IProps> = ({ children, showMouseAnimation = false,
       hasInnerContainerWidth={false}
       className={cn("relative text-white flex flex-col justify-center items-center text-center", isFullHeight ? 'h-[100dvh] ' : 'h-fit')}
     >
-      <div className="absolute -z-10 h-full w-fill bg-[url(/imgs/wooden-table.jpg)] bg-no-repeat bg-cover bg-fixed opacity-10" />
+      <div className="absolute -z-10 h-fill w-fill bg-[url(/imgs/wooden-table.jpg)] bg-no-repeat bg-cover bg-fixed opacity-10" />
       <Section isFullWidth className='!px-0 h-full'>
         {children}
       </Section>
