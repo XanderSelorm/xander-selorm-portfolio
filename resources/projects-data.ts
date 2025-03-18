@@ -6,7 +6,7 @@ const projectsData: IProject[] = [
     name: 'Treesyt Website & Dashboard',
     url: 'https://www.treesyt.com',
     description: 'An innovative proprietary agri-tech platform',
-    image: '/imgs/treesyt-project.png',
+    image: '/imgs/projects/treesyt-project.png',
     stack: 'NextJS | TypeScript | TailwindCSS',
   },
   {
@@ -14,7 +14,7 @@ const projectsData: IProject[] = [
     name: 'Experience seamless transportation at your fingertips',
     url: 'https://www.1m1sexpress.com/',
     description: `With 1M1S Express, ride-hailing becomes reliable for your convenience. Whether you need a quick ride, want to schedule one ahead of time, or track your trips in real-time, 1M1S Express has you covered`,
-    image: '/imgs/1m1s.png',
+    image: '/imgs/projects/1m1s.png',
     stack: 'NextJS | TypeScript | TailwindCSS',
     // page: '/projects/1m1s-express',
   },
@@ -24,7 +24,7 @@ const projectsData: IProject[] = [
     url: 'https://devspool.scynett.com/',
     description:
       'A platform to help streamline the recruiting process for Human Resource Managers and applicants seeking to join Scynett.',
-    image: '/imgs/devs-pool-project.png',
+    image: '/imgs/projects/devs-pool-project.png',
     stack: 'React JS | TypeScript | TailwindCSS',
   },
   {
@@ -32,7 +32,7 @@ const projectsData: IProject[] = [
     name: 'Maintaining a record of all the visitors in the workplace',
     url: 'https://www.vizitorslog.app/',
     description: `Vizitorslog streamlines the process of screening, validating, and monitoring individuals/customers across all your business locations, while ensuring compliance with privacy and safety regulations.`,
-    image: '/imgs/vizitors-log-project.png',
+    image: '/imgs/projects/vizitors-log-project.png',
     stack: 'React JS | TypeScript | TailwindCSS',
     page: '/projects/vizitors-log',
   },
@@ -42,7 +42,7 @@ const projectsData: IProject[] = [
     url: 'https://play.google.com/store/apps/details?id=com.arbutus.urcook',
     description:
       'This is a customer facing apllication which brings cutomers directly in touch with their favorite chefs for their favorite meals.',
-    image: '/imgs/urcook-project.png',
+    image: '/imgs/projects/urcook-project.png',
     stack: 'Flutter | Firebase',
     page: '/projects/urcook',
   },
@@ -50,7 +50,7 @@ const projectsData: IProject[] = [
     id: 'tailors-note',
     name: 'A productivity tool for the modern day couture',
     url: 'https://www.tailorsnote.com',
-    page: '/projects/tailors-note',
+    page: '/projects/projects/tailors-note',
     description:
       "Tailorsnote offers a novel solution for fashion designers to efficiently manage measurement details, tasks, and customers' data and communications.",
     image: '/imgs/tailors-note-project.png',
