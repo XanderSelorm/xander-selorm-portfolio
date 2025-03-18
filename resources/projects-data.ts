@@ -53,7 +53,7 @@ const projectsData: IProject[] = [
     page: '/projects/projects/tailors-note',
     description:
       "Tailorsnote offers a novel solution for fashion designers to efficiently manage measurement details, tasks, and customers' data and communications.",
-    image: '/imgs/tailors-note-project.png',
+    image: '/imgs/projects/tailors-note-project.png',
     stack: 'Flutter | Firebase | HTML/CSS',
     // linkText:""
   },
@@ -63,7 +63,7 @@ const projectsData: IProject[] = [
   //     url: 'https://www.wedeyvolta.com',
   //     description:
   //       'An innovative platform to bring businesses to the general public. at no cost!',
-  //     image: '/imgs/business-directory-project.png',
+  //     image: '/imgs/projects/business-directory-project.png',
   //     stack: 'React JS | Firebase',
   //     page: '/projects/tbd',
   //   },
