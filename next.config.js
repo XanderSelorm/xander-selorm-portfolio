@@ -4,7 +4,6 @@ const nextConfig = {
     swcMinify: true,
     images: {
         domains: [
-            'localhost',
         ],
         dangerouslyAllowSVG: true,
     },
