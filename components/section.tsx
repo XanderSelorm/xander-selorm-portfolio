@@ -1,6 +1,6 @@
 import { cn } from 'lib/utils';
 import Link from 'next/link';
-import { ReactNode } from 'react';
+import { ReactNode, RefObject } from 'react';
 
 interface IProps {
   children: ReactNode;
@@ -9,6 +9,7 @@ interface IProps {
   innerContainerWidth?: number;
   isContentCentered?: boolean;
   className?: string;
+  ref?: RefObject<HTMLDivElement | null>;
 }
 
 const Section = ({
@@ -18,9 +19,11 @@ const Section = ({
   className = '',
   isFullWidth = false,
   isContentCentered = false,
+  ref,
 }: IProps) => {
   return (
     <section
+      ref={ref}
       className={cn(`flex h-auto flex-col items-center py-14 px-4 sm:px-0`, !isFullWidth ? 'w-full max-w-4xl' : 'w-full', className)}
     >
       <div

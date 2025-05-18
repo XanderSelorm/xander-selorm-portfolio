@@ -1,6 +1,5 @@
 import Hero from 'components/hero';
 import Layout from 'components/Layout';
-import MouseAnimation from 'components/mouse-animation';
 import ProjectCard from 'components/projectCard';
 import Section from 'components/section';
 import type { NextPage } from 'next';
@@ -10,7 +9,7 @@ const Home: NextPage = () => {
   return (
     <Layout title="Home">
       {/* <!-- Hero --> */}
-      <Hero showMouseAnimation>
+      <Hero showMouseAnimation centerText>
         <h1 id="my-name" className="text-3xl font-extrabold sm:text-6xl text-center w-full jost_font">
           ALEXANDER SELORM KUBI
           </h1>
@@ -18,17 +17,14 @@ const Home: NextPage = () => {
         <h4 id='job-title' className="text-lg text-center w-full">
           FRONTEND ENGINEER
         </h4>
-      </Hero>
-
-      <Section>
         <p>I am a self-motivated and independent Frontend Engineer with
           extensive experience building high-traffic frontend web applications
           and leading development teams. With a proven track record of architecting
           scalable solutions and driving technical initiatives, I have specialized
           in creating intuitive user interfaces and implementing complex
           features for enterprise applications for almost <strong>{new Date().getFullYear() - 2020} years</strong>.</p>
-        <p>Currently, I work as a Frontend Engineer in Ghana, West Africa.</p>
-      </Section>
+        <p>Currently, I work as a Frontend Engineer from Ghana, West Africa.</p>
+      </Hero>
 
       {/* <!-- Projects --> */}
       <Section>
