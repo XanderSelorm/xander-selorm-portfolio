@@ -83,19 +83,19 @@ const Works: NextPage = () => {
         <div className="grid w-full gap-5 md:grid-cols-2">
           <div className="w-full space-y-10 text-start">
             <div id="experience" className="space-y-4">
-              <h3 className="text-2xl font-medium text-primary md:text-left">
+              <h3 className="text-2xl font-medium text-white md:text-left">
                 Work experience 💼
               </h3>
               <div className="space-y-4">
                 {aboutMeData.workExperience.map(item => (
                   <div key={item.workType}>
-                    <p className="py-1 text-left text-lg font-medium text-primary md:text-left">
+                    <p className="py-1 text-left font-medium text-white md:text-left">
                       {item.workType}
                     </p>
-                    <p className="py-1 text-left text-lg font-light md:text-left">
+                    <p className="py-1 text-left font-light md:text-left">
                       {item.title}
                     </p>
-                    <p className="py-1 text-left text-sm md:text-left">
+                    <p className="py-1 text-left text-xs md:text-left">
                       {item.duration}
                     </p>
                   </div>
@@ -120,7 +120,7 @@ const Works: NextPage = () => {
               </div>
             </div> */}
             <div id="Tech" className="space-y-4">
-              <h3 className="text-2xl font-medium text-primary md:text-left">
+              <h3 className="text-2xl font-medium text-white md:text-left">
                 Tools 👨🏾‍💻
               </h3>
               <div className="space-y-4">
@@ -136,7 +136,7 @@ const Works: NextPage = () => {
               </div>
             </div>
             <div id="education" className="space-y-4">
-              <h3 className="text-2xl font-medium text-primary md:text-left">
+              <h3 className="text-2xl font-medium text-white md:text-left">
                 Education 🎓
               </h3>
               <div className="space-y-4">
@@ -153,7 +153,7 @@ const Works: NextPage = () => {
               </div>
             </div>
             <div id="Courses" className="space-y-4">
-              <h3 className="text-2xl font-medium text-primary md:text-left">
+              <h3 className="text-2xl font-medium text-white md:text-left">
                 Professional Courses 📄
               </h3>
               <div className="space-y-4">
