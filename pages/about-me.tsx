@@ -10,9 +10,9 @@ import Link from 'next/link';
 const Works: NextPage = () => {
   return (
     <Layout title="About Me">
-      <Hero>
-        <div className="relative h-full w-full rounded-lg">
-          <div className="h-full w-full overflow-clip rounded-lg bg-[url(/imgs/about-image-pattern.png)] shadow">
+      <Hero showMouseAnimation>
+        <div className="relative w-full rounded-lg">
+          <div className="w-full overflow-clip rounded-lg bg-[url(/imgs/about-image-pattern.png)] shadow">
             <div className="h-full w-full bg-primary bg-opacity-95 sm:hidden">
               <div className="relative h-full w-full ">
                 <Image
@@ -41,7 +41,7 @@ const Works: NextPage = () => {
               </div>
             </div>
 
-            <div className="hidden h-full w-full flex-nowrap bg-primary bg-opacity-95 sm:flex">
+            <div className="hidden w-full flex-nowrap bg-primary bg-opacity-95 sm:flex">
               <div className="flex w-1/2 flex-col justify-center space-y-5 p-8 pr-0 text-start">
                 <h4 className="text-5xl font-bold leading-normal">
                   Alexander

@@ -17,14 +17,26 @@ const Home: NextPage = () => {
         <h4 id='job-title' className="text-lg text-center w-full">
           FRONTEND ENGINEER
         </h4>
-        <p>I am a self-motivated and independent Frontend Engineer with
+        <div className='hidden sm:block'>
+          <p>Welcome! I am a self-motivated and independent Frontend Engineer with
+            extensive experience building high-traffic frontend web applications
+            and leading development teams. With a proven track record of architecting
+            scalable solutions and driving technical initiatives, I have specialized
+            in creating intuitive user interfaces and implementing complex
+            features for enterprise applications for almost <strong>{new Date().getFullYear() - 2020} years</strong>.</p>
+          <p>Currently, I work as a Frontend Engineer from Ghana, West Africa.</p>
+        </div>
+      </Hero>
+
+      <Section className='sm:hidden'>
+        <p>Welcome! I am a self-motivated and independent Frontend Engineer with
           extensive experience building high-traffic frontend web applications
           and leading development teams. With a proven track record of architecting
           scalable solutions and driving technical initiatives, I have specialized
           in creating intuitive user interfaces and implementing complex
           features for enterprise applications for almost <strong>{new Date().getFullYear() - 2020} years</strong>.</p>
         <p>Currently, I work as a Frontend Engineer from Ghana, West Africa.</p>
-      </Hero>
+      </Section>
 
       {/* <!-- Projects --> */}
       <Section>
