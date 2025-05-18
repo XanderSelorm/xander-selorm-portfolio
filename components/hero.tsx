@@ -17,19 +17,14 @@ const Hero: FunctionComponent<IProps> = ({ children, showMouseAnimation = false,
       isFullWidth
       isContentCentered
       hasInnerContainerWidth={false}
-      className={cn("relative text-white flex flex-col justify-center items-center text-center", isFullHeight ? 'h-[100dvh] ' : 'h-fit')}
+      className={cn("relative text-white flex flex-col md:justify-center items-center text-center", isFullHeight ? 'h-[100dvh] ' : 'h-fit')}
       ref={sectionRef}
     >
       <div className="absolute -z-10 h-fill w-fill bg-[url(/imgs/wooden-table.jpg)] bg-no-repeat bg-cover bg-fixed opacity-10" />
       <Section isFullWidth isContentCentered={centerText} className={'!px-0 h-full'}>
         {children}
       </Section>
-      {showMouseAnimation ? <div className='cursor-pointer' onClick={() => {
-        if (sectionRef.current) {
-          window.scrollTo({ top: sectionRef.current.scrollHeight, behavior: 'smooth' });
-        }
-
-      }}><MouseAnimation /></div>
+      {showMouseAnimation ? <MouseAnimation className='cursor-pointer hidden xs:block' />
         : null}
     </Section>
   );
