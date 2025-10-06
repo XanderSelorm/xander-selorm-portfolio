@@ -79,7 +79,7 @@ const Works: NextPage = () => {
         </div>
       </Section>
 
-      <Section className="">
+      {/* <Section className="">
         <div className="grid w-full gap-5 md:grid-cols-2">
           <div className="w-full space-y-10 text-start">
             <div id="experience" className="space-y-4">
@@ -104,7 +104,7 @@ const Works: NextPage = () => {
             </div>
           </div>
           <div className="w-full space-y-10 text-start">
-            {/* <div id="Skills" className="space-y-4">
+             <div id="Skills" className="space-y-4">
               <h3 className="text-2xl font-medium text-primary md:text-left">
                 Skills 🪄
               </h3>
@@ -118,7 +118,7 @@ const Works: NextPage = () => {
                   ))}
                 </p>
               </div>
-            </div> */}
+            </div>
             <div id="Tech" className="space-y-4">
               <h3 className="text-2xl font-medium text-white md:text-left">
                 Tools 👨🏾‍💻
@@ -170,7 +170,7 @@ const Works: NextPage = () => {
             </div>
           </div>
         </div>
-      </Section>
+      </Section> */}
     </Layout>
   );
 };
