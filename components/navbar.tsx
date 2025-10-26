@@ -1,5 +1,5 @@
-import { MouseEvent, Fragment, useRef, useState, useEffect } from 'react';
-import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { useState, useEffect } from 'react';
+import { Transition } from '@headlessui/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaBars } from 'react-icons/fa';
@@ -108,32 +108,29 @@ const Navbar = () => {
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          {ref => (
+          <div
+            className="rounded-lg bg-white py-5 md:hidden"
+            id="mobile-menu"
+          >
             <div
-              className="rounded-lg bg-white py-5 md:hidden"
-              id="mobile-menu"
+              className="mx-auto max-w-5xl space-y-1 px-6 pt-2 pb-3 sm:px-3"
             >
-              <div
-                ref={ref}
-                className="mx-auto max-w-5xl space-y-1 px-6 pt-2 pb-3 sm:px-3"
-              >
-                <ul className="flex flex-col items-center gap-6 text-sm">
-                  {navItems.map(navItem => (
-                    <li
-                      key={navItem.label}
-                      className={` text-gray-500 transition hover:text-gray-500/75 ${
-                        router.asPath == navItem.link ? 'text-secondary' : ''
-                      }`}
-                    >
-                      <Link href={navItem.link} target={navItem.target}>
-                        {navItem.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <ul className="flex flex-col items-center gap-6 text-sm">
+                {navItems.map(navItem => (
+                  <li
+                    key={navItem.label}
+                    className={` text-gray-500 transition hover:text-gray-500/75 ${
+                      router.asPath == navItem.link ? 'text-secondary' : ''
+                    }`}
+                  >
+                    <Link href={navItem.link} target={navItem.target}>
+                      {navItem.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-          )}
+          </div>
         </Transition>
       </div>
     </nav>

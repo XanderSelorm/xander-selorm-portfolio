@@ -17,13 +17,12 @@ const Works: NextPage = () => {
               <div className="relative h-full w-full ">
                 <Image
                   priority
-                  className=" top-0 bg-top"
+                  className=" top-0 bg-top object-cover"
                   src="/imgs/about-portrait-mask-bw.png"
                   alt=""
-                  width="100%"
-                  height="100%"
-                  layout="responsive"
-                  objectFit="cover"
+                  width={800}
+                  height={1000}
+                  style={{ width: '100%', height: 'auto' }}
                 />
               </div>
               <div className="flex flex-col space-y-5 p-8 pt-0 text-start">
@@ -58,13 +57,12 @@ const Works: NextPage = () => {
               <div className="relative h-full w-1/2">
                 <Image
                   priority
-                  className=" top-0 bg-top"
+                  className=" top-0 bg-top object-cover"
                   src="/imgs/about-landscape-mask-bw.png"
                   alt=""
-                  width="100%"
-                  height="100%"
-                  layout="responsive"
-                  objectFit="cover"
+                  width={1000}
+                  height={800}
+                  style={{ width: '100%', height: 'auto' }}
                 />
               </div>
             </div>
