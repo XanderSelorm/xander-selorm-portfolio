@@ -6,6 +6,7 @@ import { FaBars } from 'react-icons/fa';
 import React from 'react';
 import { useRouter } from 'next/router';
 import { cn } from 'lib/utils';
+import { ThemeToggle } from './ThemeToggle';
 
 const navItems = [
   {
@@ -80,11 +81,14 @@ const Navbar = () => {
                   }`}
                 >
                   {' '}
-                  <Link href={navItem.link} passHref>
-                    <a target={navItem.target}>{navItem.label}</a>
+                  <Link href={navItem.link} passHref target={navItem.target}>
+                    {navItem.label}
                   </Link>
                 </li>
               ))}
+              <li>
+                <ThemeToggle />
+              </li>
             </ul>
           </div>
 
@@ -128,6 +132,9 @@ const Navbar = () => {
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <ThemeToggle />
+                </li>
               </ul>
             </div>
           </div>

@@ -24,9 +24,7 @@ const Footer = () => {
                   passHref
                   target="_blank"
                 >
-                  <a target="_blank">
-                    <FaGoogle className="rounded-lg text-2xl" />
-                  </a>
+                  <FaGoogle className="rounded-lg text-2xl" />
                 </Link>
               </li>
               <li className="cursor-pointer">
@@ -35,9 +33,7 @@ const Footer = () => {
                   passHref
                   target="_blank"
                 >
-                  <a target="_blank">
-                    <FaLinkedin className="rounded-lg text-2xl" />
-                  </a>
+                  <FaLinkedin className="rounded-lg text-2xl" />
                 </Link>
               </li>
               <li className="cursor-pointer">
@@ -46,9 +42,7 @@ const Footer = () => {
                   passHref
                   target="_blank"
                 >
-                  <a target="_blank">
-                    <FaTwitterSquare className="rounded-lg text-2xl" />
-                  </a>
+                  <FaTwitterSquare className="rounded-lg text-2xl" />
                 </Link>
               </li>
               <li className="cursor-pointer">
@@ -56,9 +50,7 @@ const Footer = () => {
                   href="https://www.facebook.com/XanderSelorm/"
                   target="_blank"
                 >
-                  <a target="_blank">
-                    <FaFacebookSquare className="rounded-lg text-2xl" />
-                  </a>
+                  <FaFacebookSquare className="rounded-lg text-2xl" />
                 </Link>
               </li>
               <li className="cursor-pointer">
@@ -67,16 +59,14 @@ const Footer = () => {
                   passHref
                   target="_blank"
                 >
-                  <a target="_blank">
-                    <FaInstagram className="rounded-lg text-2xl" />
-                  </a>
+                  <FaInstagram className="rounded-lg text-2xl" />
                 </Link>
               </li>
             </ul>
           </div>
           <div>
-            <Link href="mailto:xanderselorm@gmail.com" passHref target="_blank">
-              <a className="btn btn-solid" target="_blank">{`Get in touch`}</a>
+            <Link className="btn btn-solid" href="mailto:xanderselorm@gmail.com" passHref target="_blank">
+              Get in touch
             </Link>
           </div>
 
