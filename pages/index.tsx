@@ -9,12 +9,12 @@ const Home: NextPage = () => {
   return (
     <Layout title="Home">
       {/* <!-- Hero --> */}
-      <Hero showMouseAnimation centerText>
-        <h1 id="my-name" className="text-3xl font-extrabold sm:text-6xl text-center w-full jost_font">
+      <Hero showMouseAnimation>
+        <h1 id="my-name" className="text-4xl font-extrabold sm:text-5xl w-full jost_font">
           ALEXANDER SELORM KUBI
           </h1>
 
-        <h4 id='job-title' className="text-lg text-center w-full">
+        <h4 id='job-title' className="text-xl w-full">
           FRONTEND ENGINEER
         </h4>
         <div className='hidden sm:block'>
@@ -40,7 +40,7 @@ const Home: NextPage = () => {
 
       {/* <!-- Projects --> */}
       <Section>
-        <h1 className="text-3xl font-bold">Featured Works</h1>
+        <h1 className="text-2xl font-bold">Featured Works</h1>
 
         <div className="w-full space-y-10">
           {projectsData.map(item => (

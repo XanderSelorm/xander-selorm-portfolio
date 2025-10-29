@@ -10,11 +10,11 @@ const Projects: NextPage = () => {
   return (
     <Layout title="My Projects">
       <SectionWithBgImage isFullHeight={false}>
-        <h1 id="my-name" className="text-3xl font-extrabold sm:text-6xl text-center w-full jost_font">
+        <h1 id="my-name" className="text-4xl font-extrabold sm:text-5xl text-center w-full jost_font">
           Projects
         </h1>
 
-        <h4 id='job-title' className="text-lg text-center w-full">
+        <h4 id='job-title' className="text-xl text-center w-full">
           FEATURED WORKS
         </h4>
       </SectionWithBgImage>

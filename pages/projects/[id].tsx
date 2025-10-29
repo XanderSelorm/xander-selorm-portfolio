@@ -33,13 +33,13 @@ const ProjectDetails: NextPage<Props> = (props: Props) => {
 
       {/* <!-- Projects --> */}
       <Section>
-        <h1 className="text-3xl font-bold text-primary">{props.project.name}</h1>
+        <h1 className="text-2xl font-bold">{props.project.name}</h1>
 
         <div className="w-full space-y-10">
           <p>{props.project.description}</p>
         </div>
 
-        <div className="flex w-fit flex-wrap text-center text-lg font-semibold hover:text-primary hover:underline">
+        <div className="flex w-fit flex-wrap text-center text-base font-semibold hover:text-primary hover:underline">
           {props.project.url ? (
             <Link href={props.project.url} target="_blank">
               <div className="flex cursor-pointer flex-nowrap items-center space-x-2">

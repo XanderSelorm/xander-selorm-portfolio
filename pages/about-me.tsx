@@ -12,8 +12,8 @@ const Works: NextPage = () => {
     <Layout title="About Me">
       <Hero showMouseAnimation>
         <div className="relative w-full rounded-lg">
-          <div className="w-full overflow-clip rounded-lg bg-[url(/imgs/about-image-pattern.png)] shadow">
-            <div className="h-full w-full bg-primary bg-opacity-95 sm:hidden">
+          <div className="w-full overflow-clip rounded-lg shadow">
+            <div className="h-full w-full bg-card sm:hidden">
               <div className="relative h-full w-full ">
                 <Image
                   priority
@@ -26,7 +26,7 @@ const Works: NextPage = () => {
                 />
               </div>
               <div className="flex flex-col space-y-5 p-8 pt-0 text-start">
-                <h4 className="text-5xl font-bold leading-normal">
+                <h4 className="text-4xl font-bold leading-normal">
                   Alexander
                   <br />
                   Selorm Kubi
@@ -40,9 +40,9 @@ const Works: NextPage = () => {
               </div>
             </div>
 
-            <div className="hidden w-full flex-nowrap bg-primary bg-opacity-95 sm:flex">
+            <div className="hidden w-full flex-nowrap bg-card sm:flex">
               <div className="flex w-1/2 flex-col justify-center space-y-5 p-8 pr-0 text-start">
-                <h4 className="text-5xl font-bold leading-normal">
+                <h4 className="text-4xl font-bold leading-normal">
                   Alexander
                   <br />
                   Selorm Kubi
@@ -69,7 +69,7 @@ const Works: NextPage = () => {
           </div>
         </div>
       </Hero>
-      <Section className="text-lg">
+      <Section className="text-base">
         <div className="space-y-8 text-start">
           {aboutMeData.brief.map((item, index) => (
             <p key={index}>{item}</p>

@@ -3,7 +3,6 @@ import { Transition } from '@headlessui/react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { FaBars } from 'react-icons/fa';
-import React from 'react';
 import { useRouter } from 'next/router';
 import { cn } from 'lib/utils';
 import { ThemeToggle } from './ThemeToggle';
@@ -53,56 +52,58 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className={cn(`fixed top-0 z-50 w-full py-3 text-white`, scrolled ? 'bg-gradient-to-b from-primary' : '')}>
-      <div className="w-full flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
-        <Link className="block" href="/">
-          <div className="w-100 h-50 relative cursor-pointer">
-            <Image
-              // layout="fill"
-              src="/icons/icon-logo.png"
-              width={40}
-              height={40}
-              alt=""
-            />
-          </div>
-        </Link>
+    <nav className='fixed top-0 z-50 w-full text-white'>
+      <div className={cn(`py-3 flex justify-center`, scrolled ? 'bg-background from-card' : '')}>
+        <div className="w-full max-w-4xl flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+          <Link className="block" href="/">
+            <div className="w-100 h-50 relative cursor-pointer">
+              <Image
+                // layout="fill"
+                src="/icons/icon-logo.png"
+                width={40}
+                height={40}
+                alt=""
+              />
+            </div>
+          </Link>
 
-        <div className="md:flex md:items-center md:gap-12">
-          <div className="hidden md:block" aria-labelledby="header-navigation">
-            <h2 className="sr-only" id="header-navigation">
-              Header navigation
-            </h2>
+          <div className="md:flex md:items-center md:gap-12">
+            <div className="hidden md:block" aria-labelledby="header-navigation">
+              <h2 className="sr-only" id="header-navigation">
+                Header navigation
+              </h2>
 
-            <ul className="flex items-center gap-10 text-sm">
-              {navItems.map(navItem => (
-                <li
-                  key={navItem.link}
-                  className={`cursor-pointer transition hover:text-secondary ${router.asPath == navItem.link ? 'text-secondary' : ''
-                  }`}
-                >
-                  {' '}
-                  <Link href={navItem.link} passHref target={navItem.target}>
-                    {navItem.label}
-                  </Link>
+              <ul className="flex items-center gap-10 text-sm">
+                {navItems.map(navItem => (
+                  <li
+                    key={navItem.link}
+                    className={`cursor-pointer transition hover:text-primary ${router.asPath == navItem.link ? 'text-primary' : ''
+                      }`}
+                  >
+                    {' '}
+                    <Link href={navItem.link} passHref target={navItem.target}>
+                      {navItem.label}
+                    </Link>
+                  </li>
+                ))}
+                <li>
+                  <ThemeToggle />
                 </li>
-              ))}
-              <li>
-                <ThemeToggle />
-              </li>
-            </ul>
-          </div>
+              </ul>
+            </div>
 
-          <div className="block md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="rounded bg-gray-100 p-2 text-gray-600 transition hover:text-gray-600/75"
-            >
-              <FaBars className="block h-6 w-6" aria-hidden="true" />
-            </button>
+            <div className="block md:hidden">
+              <button
+                onClick={() => setIsOpen(!isOpen)}
+                className="rounded bg-muted p-2 text-foreground transition hover:opacity-75"
+              >
+                <FaBars className="block h-6 w-6" aria-hidden="true" />
+              </button>
+            </div>
           </div>
         </div>
       </div>
-      <div className="mx-auto max-w-6xl px-4">
+      <div className="mx-auto max-w-6xl mt-2 px-4 md:hidden">
         <Transition
           show={isOpen}
           enter="transition ease-out duration-100 transform"
@@ -113,7 +114,7 @@ const Navbar = () => {
           leaveTo="opacity-0 scale-95"
         >
           <div
-            className="rounded-lg bg-white py-5 md:hidden"
+            className="rounded-lg bg-card py-5"
             id="mobile-menu"
           >
             <div
@@ -123,9 +124,8 @@ const Navbar = () => {
                 {navItems.map(navItem => (
                   <li
                     key={navItem.label}
-                    className={` text-gray-500 transition hover:text-gray-500/75 ${
-                      router.asPath == navItem.link ? 'text-secondary' : ''
-                    }`}
+                    className={` text-card-foreground transition hover:text-primary ${router.asPath == navItem.link ? 'text-primary' : ''
+                      }`}
                   >
                     <Link href={navItem.link} target={navItem.target}>
                       {navItem.label}

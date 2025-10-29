@@ -15,6 +15,10 @@ module.exports = {
 			'3xl': [{ min: '1920px' }],
 		},
 		extend: {
+			fontFamily: {
+				sans: ['Space Mono', 'ui-monospace', 'SF Mono', 'Monaco', 'Cascadia Code', 'Menlo', 'Consolas', 'Courier New', 'monospace'],
+				mono: ['Space Mono', 'ui-monospace', 'SF Mono', 'Monaco', 'Cascadia Code', 'Menlo', 'Consolas', 'Courier New', 'monospace'],
+			},
 			colors: {
 				'gray-text': '#333333',
 				background: 'var(--background)',
@@ -59,22 +63,15 @@ module.exports = {
 				}
 			},
 			fontSize: {
-				sm: [
-					'18px',
-					'24px'
-				],
-				base: [
-					'20px',
-					'30px'
-				],
-				lg: [
-					'24px',
-					'34px'
-				],
-				xl: [
-					'28px',
-					'36px'
-				]
+				xs: ['0.75rem', { lineHeight: '1rem' }],      // 12px - small labels
+				sm: ['0.875rem', { lineHeight: '1.25rem' }],  // 14px - navigation, captions
+				base: ['1rem', { lineHeight: '1.5rem' }],     // 16px - body text
+				lg: ['1.125rem', { lineHeight: '1.75rem' }],  // 18px - large body, subheadings
+				xl: ['1.25rem', { lineHeight: '1.75rem' }],   // 20px - small headings
+				'2xl': ['1.5rem', { lineHeight: '2rem' }],    // 24px - medium headings
+				'3xl': ['1.875rem', { lineHeight: '2.25rem' }], // 30px - large headings
+				'4xl': ['2.25rem', { lineHeight: '2.5rem' }], // 36px - hero text
+				'5xl': ['3rem', { lineHeight: '1' }],         // 48px - display text
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
