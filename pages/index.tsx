@@ -14,27 +14,27 @@ const Home: NextPage = () => {
           ALEXANDER SELORM KUBI
           </h1>
 
-        <h4 id='job-title' className="text-xl w-full">
+        <h4 id='job-title' className="text-sm tracking-widest text-muted-foreground w-full">
           FRONTEND ENGINEER
         </h4>
-        <div className='hidden sm:block'>
+        <div className='hidden sm:block text-sm text-muted-foreground space-y-3 leading-relaxed'>
           <p>Welcome! I am a self-motivated and independent Frontend Engineer with
             extensive experience building high-traffic frontend web applications
             and leading development teams. With a proven track record of architecting
             scalable solutions and driving technical initiatives, I have specialized
             in creating intuitive user interfaces and implementing complex
-            features for enterprise applications for almost <strong>{new Date().getFullYear() - 2020} years</strong>.</p>
+            features for enterprise applications for almost <strong className="text-foreground">{new Date().getFullYear() - 2020} years</strong>.</p>
           <p>Currently, I work as a Frontend Engineer from Ghana, West Africa.</p>
         </div>
       </Hero>
 
-      <Section className='sm:hidden'>
+      <Section className='sm:hidden text-sm text-muted-foreground leading-relaxed'>
         <p>Welcome! I am a self-motivated and independent Frontend Engineer with
           extensive experience building high-traffic frontend web applications
           and leading development teams. With a proven track record of architecting
           scalable solutions and driving technical initiatives, I have specialized
           in creating intuitive user interfaces and implementing complex
-          features for enterprise applications for almost <strong>{new Date().getFullYear() - 2020} years</strong>.</p>
+          features for enterprise applications for almost <strong className="text-foreground">{new Date().getFullYear() - 2020} years</strong>.</p>
         <p>Currently, I work as a Frontend Engineer from Ghana, West Africa.</p>
       </Section>
 

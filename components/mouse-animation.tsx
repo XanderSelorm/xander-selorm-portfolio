@@ -12,7 +12,7 @@ const MouseAnimation: FC<Props> = ({ className }) => {
             window.scrollTo({ top: ref.current.parentElement?.parentElement?.scrollHeight, behavior: 'smooth' });
         }
     }}>
-        <div id="mouse" className={cn("relative border border-secondary rounded-lg w-6 h-12", className)} />
+        <div id="mouse" className={cn("relative border border-foreground/40 rounded-lg w-6 h-12", className)} />
     </div>;
 }
 

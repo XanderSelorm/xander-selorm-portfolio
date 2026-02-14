@@ -11,67 +11,71 @@ import SectionWithBgImage from './section-with-bg';
 
 const Footer = () => {
   return (
-    <footer className='card h-[50dvh] my-8 mx-auto flex w-full max-w-6xl flex-col items-center justify-center px-4 sm:px-6 lg:px-8 space-y-8'>
-      <div className="flex flex-col space-y-5 text-center sm:text-start">
-        <h4 className="text-center text-2xl">{`Let's Connect!`}</h4>
+    <footer className='border-t border-border mt-16 mx-auto flex w-full max-w-6xl flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-20 space-y-10'>
+      <div className="flex flex-col items-center space-y-6">
+        <h4 className="text-2xl font-bold">{`Let's Connect!`}</h4>
 
-        <ul className="flex justify-center space-x-3">
-          <li className="cursor-pointer">
+        <ul className="flex justify-center space-x-5">
+          <li>
             <Link
               href="mailto:parity_flame_3s@icloud.com"
               passHref
               target="_blank"
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              <FaGoogle className="rounded-lg text-xl" />
+              <FaGoogle className="text-xl" />
             </Link>
           </li>
-          <li className="cursor-pointer">
+          <li>
             <Link
               href="https://www.linkedin.com/in/XanderSelorm/"
               passHref
               target="_blank"
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              <FaLinkedin className="rounded-lg text-xl" />
+              <FaLinkedin className="text-xl" />
             </Link>
           </li>
-          <li className="cursor-pointer">
+          <li>
             <Link
               href="https://www.twitter.com/XanderSelorm/"
               passHref
               target="_blank"
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              <FaTwitterSquare className="rounded-lg text-xl" />
+              <FaTwitterSquare className="text-xl" />
             </Link>
           </li>
-          <li className="cursor-pointer">
+          <li>
             <Link
               href="https://www.facebook.com/XanderSelorm/"
               target="_blank"
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              <FaFacebookSquare className="rounded-lg text-xl" />
+              <FaFacebookSquare className="text-xl" />
             </Link>
           </li>
-          <li className="cursor-pointer">
+          <li>
             <Link
               href="https://www.instagram.com/xanderselorm/"
               passHref
               target="_blank"
+              className="text-muted-foreground hover:text-foreground transition-colors"
             >
-              <FaInstagram className="rounded-lg text-xl" />
+              <FaInstagram className="text-xl" />
             </Link>
           </li>
         </ul>
       </div>
-      <div>
-        <Link className="btn btn-solid" href="mailto:parity_flame_3s@icloud.com" passHref target="_blank">
-          Get in touch
-        </Link>
-      </div>
 
-      <a>
+      <Link className="btn btn-solid" href="mailto:parity_flame_3s@icloud.com" passHref target="_blank">
+        Get in touch
+      </Link>
+
+      <p className="text-sm text-muted-foreground">
         Copyright &copy; {new Date().getFullYear()}, Xander Selorm. All
         rights reserved.
-      </a>
+      </p>
     </footer>
   );
 };
