@@ -11,16 +11,19 @@ const Home: NextPage = () => {
     <Layout title="Home">
       <Hero showMouseAnimation isFullHeight>
         <p className="text-sm font-medium tracking-widest text-primary mono_font uppercase">
-          Frontend Engineer
+          Software Engineer
         </p>
 
-        <h1 id="my-name" className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] w-full">
+        <h1
+          id="my-name"
+          className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] w-full"
+        >
           Alexander Selorm Kubi
         </h1>
 
         <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-          Building high-traffic frontend web applications and leading
-          development teams for{' '}
+          Building high-traffic web applications and leading development teams
+          for{' '}
           <span className="text-foreground font-semibold">
             {new Date().getFullYear() - 2020}+ years
           </span>
@@ -40,7 +43,10 @@ const Home: NextPage = () => {
       <Section>
         <div className="flex items-center justify-between w-full">
           <h2 className="text-2xl font-bold">Featured Works</h2>
-          <Link href="/projects" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors">
+          <Link
+            href="/projects"
+            className="text-sm font-medium text-primary hover:text-primary/80 transition-colors"
+          >
             View all &rarr;
           </Link>
         </div>
