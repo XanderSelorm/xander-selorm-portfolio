@@ -8,10 +8,11 @@ import Navbar from './navbar';
 interface Props {
   title: string;
   children?: ReactNode | ReactNode[];
+  footerHasBorderTop?: boolean;
 }
 
 const Layout = (props: Props) => {
-  const router = useRouter();
+  const { footerHasBorderTop } = props;
 
   return (
     <div className="inter_font relative flex min-h-screen flex-col items-center">
@@ -42,7 +43,7 @@ const Layout = (props: Props) => {
       </Head>
       <Navbar />
       <>{props.children}</>
-      <Footer />
+      <Footer hasBorderTop={footerHasBorderTop} />
     </div>
   );
 };

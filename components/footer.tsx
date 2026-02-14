@@ -9,9 +9,13 @@ import {
 import Hero from './hero';
 import SectionWithBgImage from './section-with-bg';
 
-const Footer = () => {
+const Footer = ({ hasBorderTop = true }: { hasBorderTop?: boolean }) => {
   return (
-    <footer className='border-t border-border mt-16 mx-auto flex w-full max-w-6xl flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-20 space-y-10'>
+    <footer
+      className={`${
+        hasBorderTop ? 'border-t border-border' : ''
+      } mt-16 mx-auto flex w-full max-w-6xl flex-col items-center justify-center px-4 sm:px-6 lg:px-8 py-20 space-y-10`}
+    >
       <div className="flex flex-col items-center space-y-6">
         <h4 className="text-2xl font-bold">{`Let's Connect!`}</h4>
 
@@ -68,13 +72,18 @@ const Footer = () => {
         </ul>
       </div>
 
-      <Link className="btn btn-solid" href="mailto:parity_flame_3s@icloud.com" passHref target="_blank">
+      <Link
+        className="btn btn-solid"
+        href="mailto:parity_flame_3s@icloud.com"
+        passHref
+        target="_blank"
+      >
         Get in touch
       </Link>
 
       <p className="text-sm text-muted-foreground">
-        Copyright &copy; {new Date().getFullYear()}, Xander Selorm. All
-        rights reserved.
+        Copyright &copy; {new Date().getFullYear()}, Xander Selorm. All rights
+        reserved.
       </p>
     </footer>
   );
