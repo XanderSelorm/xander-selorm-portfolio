@@ -1,4 +1,3 @@
-import Hero from 'components/hero';
 import Layout from 'components/Layout';
 import ProjectCard from 'components/projectCard';
 import Section from 'components/section';
@@ -10,26 +9,28 @@ const Projects: NextPage = () => {
   return (
     <Layout title="My Projects">
       <SectionWithBgImage isFullHeight={false}>
-        <h1 id="my-name" className="text-4xl font-extrabold sm:text-5xl text-center w-full jost_font">
+        <h1 id="my-name" className="text-4xl font-extrabold sm:text-5xl text-center w-full">
           Projects
         </h1>
 
-        <h4 id='job-title' className="text-xl text-center w-full">
+        <h4 id='job-title' className="text-xl text-center w-full text-muted-foreground">
           FEATURED WORKS
         </h4>
       </SectionWithBgImage>
-      <Section className='space-y-10 pt-0'>
-        {projectsData.map(item => (
-          <ProjectCard
-            key={item.url}
-            title={item.name}
-            description={item.description}
-            imgSrc={item.image}
-            link={item.page ?? item.url}
-            stack={item.stack}
-            linkText={item.linkText}
-          />
-        ))}
+      <Section className='pt-0'>
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {projectsData.map(item => (
+            <ProjectCard
+              key={item.url}
+              title={item.name}
+              description={item.description}
+              imgSrc={item.image}
+              link={item.page ?? item.url}
+              stack={item.stack}
+              linkText={item.linkText}
+            />
+          ))}
+        </div>
       </Section>
     </Layout>
   );

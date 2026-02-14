@@ -24,11 +24,11 @@ const Section = ({
   return (
     <section
       ref={ref}
-      className={cn(`flex h-auto flex-col items-center py-14 px-4`, !isFullWidth ? 'w-full max-w-4xl' : 'w-full', className)}
+      className={cn(`flex h-auto flex-col items-center py-14 px-4 sm:px-6 lg:px-8`, !isFullWidth ? 'w-full max-w-6xl' : 'w-full', className)}
     >
       <div
         className={cn(`mx-auto flex flex-col items-center space-y-4 text-center `, !isContentCentered && 'md:items-start md:text-start', hasInnerContainerWidth && !innerContainerWidth
-          ? 'w-full max-w-4xl px-4 '
+          ? 'w-full max-w-6xl px-4 sm:px-6 lg:px-8'
           : innerContainerWidth ?? 'w-full')}
       >
         {children}

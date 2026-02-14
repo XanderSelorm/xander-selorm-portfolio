@@ -14,7 +14,7 @@ const Layout = (props: Props) => {
   const router = useRouter();
 
   return (
-    <div className="inter_font relative flex flex-col items-center">
+    <div className="inter_font relative flex min-h-screen flex-col items-center">
       <Script
         async
         strategy="lazyOnload"

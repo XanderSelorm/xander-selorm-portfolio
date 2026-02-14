@@ -7,27 +7,14 @@ import { useRouter } from 'next/router';
 import { cn } from 'lib/utils';
 import { ThemeToggle } from './ThemeToggle';
 
-const navItems = [
-  {
-    label: 'Home',
-    link: '/',
-  },
-  {
-    label: 'Projects',
-    link: '/projects',
-  },
-  {
-    label: 'About Me',
-    link: '/about-me',
-  },
+const navLinks = [
+  { label: 'Home', link: '/' },
+  { label: 'Projects', link: '/projects' },
+  { label: 'About Me', link: '/about-me' },
   {
     label: 'Blog',
     link: 'https://dev.to/xanderselorm',
     target: '_blank',
-  },
-  {
-    label: 'Get in touch',
-    link: '/contact',
   },
 ];
 
@@ -38,11 +25,7 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 100) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 100);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -52,40 +35,56 @@ const Navbar = () => {
   }, []);
 
   return (
-    <nav className='fixed top-0 z-50 w-full text-foreground'>
-      <div className={cn(`py-3 flex justify-center transition-all duration-300`, scrolled ? 'bg-background/80 backdrop-blur-lg border-b border-border' : '')}>
-        <div className="w-full max-w-4xl flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+    <nav className="fixed top-0 z-50 w-full text-foreground">
+      <div
+        className={cn(
+          'py-3 flex justify-center transition-all duration-300',
+          scrolled
+            ? 'bg-background/90 backdrop-blur-xl border-b border-border shadow-sm'
+            : 'bg-transparent',
+        )}
+      >
+        <div className="w-full max-w-6xl flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
           <Link className="block" href="/">
-            <div className="w-100 h-50 relative cursor-pointer">
-              <Image
-                // layout="fill"
-                src="/icons/icon-logo.png"
-                width={40}
-                height={40}
-                alt=""
-              />
+            <div className="w-100 h-50 relative cursor-pointer rounded-lg bg-foreground dark:bg-transparent p-1.5">
+              <Image src="/icons/icon-logo.png" width={40} height={40} alt="" />
             </div>
           </Link>
 
           <div className="md:flex md:items-center md:gap-12">
-            <div className="hidden md:block" aria-labelledby="header-navigation">
+            <div
+              className="hidden md:block"
+              aria-labelledby="header-navigation"
+            >
               <h2 className="sr-only" id="header-navigation">
                 Header navigation
               </h2>
 
-              <ul className="flex items-center gap-10 text-sm">
-                {navItems.map(navItem => (
+              <ul className="flex items-center gap-8 text-sm font-medium">
+                {navLinks.map(navItem => (
                   <li
                     key={navItem.link}
-                    className={`cursor-pointer transition hover:text-primary ${router.asPath == navItem.link ? 'text-primary' : ''
-                      }`}
+                    className={cn(
+                      'cursor-pointer transition-colors relative py-1',
+                      'hover:text-primary',
+                      router.asPath === navItem.link
+                        ? 'text-primary after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-primary after:rounded-full'
+                        : 'text-muted-foreground',
+                    )}
                   >
-                    {' '}
                     <Link href={navItem.link} passHref target={navItem.target}>
                       {navItem.label}
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <Link
+                    href="/contact"
+                    className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                  >
+                    Get in touch
+                  </Link>
+                </li>
                 <li>
                   <ThemeToggle />
                 </li>
@@ -95,9 +94,9 @@ const Navbar = () => {
             <div className="block md:hidden">
               <button
                 onClick={() => setIsOpen(!isOpen)}
-                className="rounded bg-muted p-2 text-foreground transition hover:opacity-75"
+                className="rounded-lg bg-muted p-2 text-foreground transition hover:opacity-75"
               >
-                <FaBars className="block h-6 w-6" aria-hidden="true" />
+                <FaBars className="block h-5 w-5" aria-hidden="true" />
               </button>
             </div>
           </div>
@@ -114,24 +113,32 @@ const Navbar = () => {
           leaveTo="opacity-0 scale-95"
         >
           <div
-            className="rounded-lg bg-card/95 backdrop-blur-lg border border-border py-5 shadow-lg"
+            className="rounded-xl bg-card/95 backdrop-blur-xl border border-border py-6 shadow-xl"
             id="mobile-menu"
           >
-            <div
-              className="mx-auto max-w-5xl space-y-1 px-6 pt-2 pb-3 sm:px-3"
-            >
-              <ul className="flex flex-col items-center gap-6 text-sm">
-                {navItems.map(navItem => (
+            <div className="mx-auto max-w-5xl space-y-1 px-6 pt-2 pb-3 sm:px-3">
+              <ul className="flex flex-col items-center gap-6 text-sm font-medium">
+                {navLinks.map(navItem => (
                   <li
                     key={navItem.label}
-                    className={` text-card-foreground transition hover:text-primary ${router.asPath == navItem.link ? 'text-primary' : ''
-                      }`}
+                    className={cn(
+                      'text-card-foreground transition-colors hover:text-primary',
+                      router.asPath === navItem.link ? 'text-primary' : '',
+                    )}
                   >
                     <Link href={navItem.link} target={navItem.target}>
                       {navItem.label}
                     </Link>
                   </li>
                 ))}
+                <li>
+                  <Link
+                    href="/contact"
+                    className="rounded-lg bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+                  >
+                    Get in touch
+                  </Link>
+                </li>
                 <li>
                   <ThemeToggle />
                 </li>

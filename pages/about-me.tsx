@@ -81,19 +81,23 @@ const Works: NextPage = () => {
         <div className="grid w-full gap-5 md:grid-cols-2">
           <div className="w-full space-y-10 text-start">
             <div id="experience" className="space-y-4">
-              <h3 className="text-2xl font-medium text-white md:text-left">
+              <h3 className="text-2xl font-bold text-foreground md:text-left">
                 Work experience 💼
               </h3>
-              <div className="space-y-4">
-                {aboutMeData.workExperience.map(item => (
-                  <div key={item.workType}>
-                    <p className="py-1 text-left font-medium text-white md:text-left">
+              <div className="space-y-8">
+                {aboutMeData.workExperience.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="relative border-l border-border pl-6 pb-1"
+                  >
+                    <span className="absolute -left-[5px] top-2 h-2.5 w-2.5 rounded-full bg-primary" />
+                    <p className="text-lg font-semibold text-foreground text-left">
                       {item.workType}
                     </p>
-                    <p className="py-1 text-left font-light md:text-left">
+                    <p className="text-base font-medium text-primary text-left">
                       {item.title}
                     </p>
-                    <p className="py-1 text-left text-xs md:text-left">
+                    <p className="text-sm text-muted-foreground mt-1 text-left">
                       {item.duration}
                     </p>
                   </div>
@@ -102,27 +106,27 @@ const Works: NextPage = () => {
             </div>
           </div>
           <div className="w-full space-y-10 text-start">
-             <div id="Skills" className="space-y-4">
-              <h3 className="text-2xl font-medium text-primary md:text-left">
+            <div id="Skills" className="space-y-4">
+              <h3 className="text-2xl font-bold text-foreground md:text-left">
                 Skills 🪄
               </h3>
-              <div className="space-y-4">
-                <p>
-                  {aboutMeData.skills.map((item, index) => (
-                    <span key={index}>
-                      {item}
-                      {' || '}
-                    </span>
-                  ))}
-                </p>
+              <div className="flex flex-wrap gap-2">
+                {aboutMeData.skills.map((item, index) => (
+                  <span
+                    key={index}
+                    className="rounded-md bg-muted px-3 py-1 text-sm font-medium text-foreground"
+                  >
+                    {item}
+                  </span>
+                ))}
               </div>
             </div>
             <div id="Tech" className="space-y-4">
-              <h3 className="text-2xl font-medium text-white md:text-left">
+              <h3 className="text-2xl font-bold text-foreground md:text-left">
                 Tools 👨🏾‍💻
               </h3>
-              <div className="space-y-4">
-                <p className="leading-7">
+              <div className="">
+                <p className="leading-7 text-muted-foreground">
                   {aboutMeData.tools.map((item, index) => (
                     <span key={index}>
                       {index === aboutMeData.tools.length - 1 && ' and '}
@@ -134,16 +138,19 @@ const Works: NextPage = () => {
               </div>
             </div>
             <div id="education" className="space-y-4">
-              <h3 className="text-2xl font-medium text-white md:text-left">
+              <h3 className="text-2xl font-bold text-foreground md:text-left">
                 Education 🎓
               </h3>
               <div className="space-y-4">
-                {aboutMeData.education.map(item => (
-                  <div key={item.programme}>
-                    <p className="py-1 text-left text-lg text-primary md:text-left">
+                {aboutMeData.education.map((item, idx) => (
+                  <div
+                    key={idx}
+                    className="rounded-lg border border-border bg-card p-4"
+                  >
+                    <p className="font-semibold text-foreground text-left">
                       {item.schoolName}
                     </p>
-                    <p className="py-1 text-left text-lg font-light md:text-left">
+                    <p className="text-sm text-muted-foreground text-left">
                       {item.programme}
                     </p>
                   </div>
@@ -151,20 +158,22 @@ const Works: NextPage = () => {
               </div>
             </div>
             <div id="Courses" className="space-y-4">
-              <h3 className="text-2xl font-medium text-white md:text-left">
+              <h3 className="text-2xl font-bold text-foreground md:text-left">
                 Professional Courses 📄
               </h3>
-              <div className="space-y-4">
+              <ul className="space-y-2 list-disc list-inside text-muted-foreground">
                 {aboutMeData.certifications.map((item, index) => (
-                  <div key={item.title}>
-                    <Link href={item.link ?? ''}>
-                      <p className="py-1 text-left text-lg font-light md:text-left">
-                        {item.title}
-                      </p>
+                  <li key={index} className="text-left">
+                    <Link
+                      href={item.link ?? ''}
+                      target="_blank"
+                      className="hover:text-primary transition-colors underline decoration-dotted underline-offset-4"
+                    >
+                      {item.title}
                     </Link>
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           </div>
         </div>

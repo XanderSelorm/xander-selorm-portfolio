@@ -57,8 +57,11 @@ const ProjectDetails: NextPage<Props> = (props: Props) => {
 };
 
 export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
+  const paths = projectsData.map(project => ({
+    params: { id: project.id },
+  }));
   return {
-    paths: [], //indicates that no page needs be created at build time
+    paths: paths, //indicates that no page needs be created at build time
     fallback: 'blocking', //indicates the type of fallback
   };
 };
@@ -66,24 +69,13 @@ export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
 export const getStaticProps: GetStaticProps = async context => {
   const params = context.params;
 
-  let project: IProject | null;
+  const project =
+    projectsData.find(project => project.id === (params!.id ?? '')) ?? null;
 
-  try {
-    project =
-      projectsData.find(project => project.id === (params!.id ?? '')) ?? null;
-
-    if (!project) {
-      return {
-        redirect: {
-          destination: '/404',
-          permanent: false,
-        },
-      };
-    }
-  } catch (e) {
+  if (!project) {
     return {
       redirect: {
-        destination: '/500',
+        destination: '/404',
         permanent: false,
       },
     };

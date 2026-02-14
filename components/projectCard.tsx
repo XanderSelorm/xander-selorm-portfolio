@@ -14,29 +14,34 @@ interface Props {
 
 const ProjectCard = (props: Props) => {
   return (
-    <div className="flex flex-col items-center space-y-4 py-8 sm:items-start md:px-0 w-fill">
-      <section
-        className="relative h-60 w-full overflow-clip rounded-lg bg-muted"
-      >
-        <Image src={props.imgSrc} alt="" layout="fill" objectFit="cover" className="hover:scale-[1.02] transition-transform duration-300" />
-      </section>
-      <div className="flex flex-col items-center space-y-3 text-center sm:items-start sm:text-left">
-        <p className="text-xs text-muted-foreground tracking-wider">
-          {props.stack.toUpperCase()}
+    <div className="group flex flex-col overflow-hidden rounded-xl border border-border bg-card transition-all duration-300 hover:shadow-lg hover:border-primary/20">
+      <div className="relative h-52 sm:h-56 w-full overflow-hidden bg-muted">
+        <Image
+          src={props.imgSrc}
+          alt={props.title}
+          layout="fill"
+          objectFit="cover"
+          className="transition-transform duration-500 group-hover:scale-105"
+        />
+      </div>
+      <div className="flex flex-1 flex-col justify-between p-5 sm:p-6 space-y-3">
+        <p className="text-xs font-medium tracking-wider text-primary mono_font uppercase">
+          {props.stack}
         </p>
-        <h1 className="text-2xl font-bold">{props.title}</h1>
-
-        <p className="text-sm text-muted-foreground sm:leading-relaxed">{props.description}</p>
-
-        <div className="flex w-fit flex-wrap text-center text-sm font-semibold hover:text-primary transition-colors">
+        <h3 className="text-lg font-bold leading-snug">{props.title}</h3>
+        <p className="text-sm text-muted-foreground leading-relaxed line-clamp-3">
+          {props.description}
+        </p>
+        <div className="pt-2">
           {props.link ? (
-            <Link href={props.link}>
-              <div className="flex cursor-pointer flex-nowrap items-center space-x-1">
-                <div>{props.linkText ?? 'See more'}</div> <FiArrowUpRight />
-              </div>
+            <Link
+              href={props.link}
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+            >
+              {props.linkText ?? 'View project'} <FiArrowUpRight className="h-4 w-4" />
             </Link>
           ) : (
-              <p className="text-muted-foreground">Coming Soon</p>
+            <span className="text-sm text-muted-foreground">Coming soon</span>
           )}
         </div>
       </div>

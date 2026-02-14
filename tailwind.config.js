@@ -16,8 +16,8 @@ module.exports = {
 		},
 		extend: {
 			fontFamily: {
-				sans: ['Space Mono', 'ui-monospace', 'SF Mono', 'Monaco', 'Cascadia Code', 'Menlo', 'Consolas', 'Courier New', 'monospace'],
-				mono: ['Space Mono', 'ui-monospace', 'SF Mono', 'Monaco', 'Cascadia Code', 'Menlo', 'Consolas', 'Courier New', 'monospace'],
+				sans: ['Inter', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+				mono: ['Space Mono', 'ui-monospace', 'SF Mono', 'Monaco', 'Cascadia Code', 'Menlo', 'Consolas', 'monospace'],
 			},
 			colors: {
 				'gray-text': '#333333',
@@ -63,20 +63,23 @@ module.exports = {
 				}
 			},
 			fontSize: {
-				xs: ['0.75rem', { lineHeight: '1rem' }],      // 12px - small labels
-				sm: ['0.875rem', { lineHeight: '1.25rem' }],  // 14px - navigation, captions
-				base: ['1rem', { lineHeight: '1.5rem' }],     // 16px - body text
-				lg: ['1.125rem', { lineHeight: '1.75rem' }],  // 18px - large body, subheadings
-				xl: ['1.25rem', { lineHeight: '1.75rem' }],   // 20px - small headings
-				'2xl': ['1.5rem', { lineHeight: '2rem' }],    // 24px - medium headings
-				'3xl': ['1.875rem', { lineHeight: '2.25rem' }], // 30px - large headings
-				'4xl': ['2.25rem', { lineHeight: '2.5rem' }], // 36px - hero text
-				'5xl': ['3rem', { lineHeight: '1' }],         // 48px - display text
+				xs: ['0.75rem', { lineHeight: '1rem' }],
+				sm: ['0.875rem', { lineHeight: '1.25rem' }],
+				base: ['1rem', { lineHeight: '1.5rem' }],
+				lg: ['1.125rem', { lineHeight: '1.75rem' }],
+				xl: ['1.25rem', { lineHeight: '1.75rem' }],
+				'2xl': ['1.5rem', { lineHeight: '2rem' }],
+				'3xl': ['1.875rem', { lineHeight: '2.25rem' }],
+				'4xl': ['2.25rem', { lineHeight: '2.5rem' }],
+				'5xl': ['3rem', { lineHeight: '1' }],
+				'6xl': ['3.75rem', { lineHeight: '1', letterSpacing: '-0.02em' }],
+				'7xl': ['4.5rem', { lineHeight: '1', letterSpacing: '-0.02em' }],
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)'
+				sm: 'calc(var(--radius) - 4px)',
+				xl: 'calc(var(--radius) + 4px)',
 			}
 		}
 	},

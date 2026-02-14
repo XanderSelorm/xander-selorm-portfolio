@@ -3,47 +3,50 @@ import Layout from 'components/Layout';
 import ProjectCard from 'components/projectCard';
 import Section from 'components/section';
 import type { NextPage } from 'next';
+import Link from 'next/link';
 import projectsData from 'resources/projects-data';
 
 const Home: NextPage = () => {
   return (
     <Layout title="Home">
-      {/* <!-- Hero --> */}
-      <Hero showMouseAnimation>
-        <h1 id="my-name" className="text-4xl font-extrabold sm:text-5xl w-full jost_font">
-          ALEXANDER SELORM KUBI
-          </h1>
+      <Hero showMouseAnimation isFullHeight>
+        <p className="text-sm font-medium tracking-widest text-primary mono_font uppercase">
+          Frontend Engineer
+        </p>
 
-        <h4 id='job-title' className="text-sm tracking-widest text-muted-foreground w-full">
-          FRONTEND ENGINEER
-        </h4>
-        <div className='hidden sm:block text-sm text-muted-foreground space-y-3 leading-relaxed'>
-          <p>Welcome! I am a self-motivated and independent Frontend Engineer with
-            extensive experience building high-traffic frontend web applications
-            and leading development teams. With a proven track record of architecting
-            scalable solutions and driving technical initiatives, I have specialized
-            in creating intuitive user interfaces and implementing complex
-            features for enterprise applications for almost <strong className="text-foreground">{new Date().getFullYear() - 2020} years</strong>.</p>
-          <p>Currently, I work as a Frontend Engineer from Ghana, West Africa.</p>
+        <h1 id="my-name" className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] w-full">
+          Alexander Selorm Kubi
+        </h1>
+
+        <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
+          Building high-traffic frontend web applications and leading
+          development teams for{' '}
+          <span className="text-foreground font-semibold">
+            {new Date().getFullYear() - 2020}+ years
+          </span>
+          . Currently working from Ghana, West Africa.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 pt-4">
+          <Link href="/projects" className="btn btn-solid">
+            View my work
+          </Link>
+          <Link href="/contact" className="btn btn-outlined">
+            Get in touch
+          </Link>
         </div>
       </Hero>
 
-      <Section className='sm:hidden text-sm text-muted-foreground leading-relaxed'>
-        <p>Welcome! I am a self-motivated and independent Frontend Engineer with
-          extensive experience building high-traffic frontend web applications
-          and leading development teams. With a proven track record of architecting
-          scalable solutions and driving technical initiatives, I have specialized
-          in creating intuitive user interfaces and implementing complex
-          features for enterprise applications for almost <strong className="text-foreground">{new Date().getFullYear() - 2020} years</strong>.</p>
-        <p>Currently, I work as a Frontend Engineer from Ghana, West Africa.</p>
-      </Section>
-
-      {/* <!-- Projects --> */}
       <Section>
-        <h1 className="text-2xl font-bold">Featured Works</h1>
+        <div className="flex items-center justify-between w-full">
+          <h2 className="text-2xl font-bold">Featured Works</h2>
+          <Link href="/projects" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors">
+            View all &rarr;
+          </Link>
+        </div>
 
-        <div className="w-full space-y-10">
-          {projectsData.map(item => (
+        <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+          {projectsData.slice(0, 4).map(item => (
             <ProjectCard
               key={item.url}
               title={item.name}
