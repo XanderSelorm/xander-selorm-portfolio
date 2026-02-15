@@ -1,12 +1,16 @@
 import Hero from 'components/hero';
 import Layout from 'components/Layout';
 import Section from 'components/section';
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import Image from 'next/image';
-import aboutMeData from 'resources/about-me-data';
 import Link from 'next/link';
+import { getAboutBrief } from 'lib/data-service';
 
-const Works: NextPage = () => {
+interface Props {
+  brief: string[];
+}
+
+const Works: NextPage<Props> = ({ brief }) => {
   return (
     <Layout
       title="About Me"
@@ -74,7 +78,7 @@ const Works: NextPage = () => {
       </Hero>
       <Section className="text-base">
         <div className="space-y-8 text-start">
-          {aboutMeData.brief.map((item, index) => (
+          {brief.map((item, index) => (
             <p key={index}>{item}</p>
           ))}
         </div>
@@ -183,6 +187,11 @@ const Works: NextPage = () => {
       </Section> */}
     </Layout>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const brief = await getAboutBrief();
+  return { props: { brief }, revalidate: 30 };
 };
 
 export default Works;

@@ -2,11 +2,16 @@ import Hero from 'components/hero';
 import Layout from 'components/Layout';
 import ProjectCard from 'components/projectCard';
 import Section from 'components/section';
-import type { NextPage } from 'next';
+import type { GetStaticProps, NextPage } from 'next';
 import Link from 'next/link';
-import projectsData from 'resources/projects-data';
+import { getProjects } from 'lib/data-service';
+import { IProject } from 'shared/interfaces';
 
-const Home: NextPage = () => {
+interface Props {
+  projects: IProject[];
+}
+
+const Home: NextPage<Props> = ({ projects }) => {
   return (
     <Layout
       title="Home"
@@ -56,9 +61,9 @@ const Home: NextPage = () => {
         </div>
 
         <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-          {projectsData.slice(0, 4).map(item => (
+          {projects.slice(0, 4).map(item => (
             <ProjectCard
-              key={item.url}
+              key={item.url ?? item.id}
               title={item.name}
               description={item.description}
               imgSrc={item.image}
@@ -71,6 +76,11 @@ const Home: NextPage = () => {
       </Section>
     </Layout>
   );
+};
+
+export const getStaticProps: GetStaticProps = async () => {
+  const projects = await getProjects();
+  return { props: { projects }, revalidate: 30 };
 };
 
 export default Home;

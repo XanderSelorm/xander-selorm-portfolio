@@ -4,7 +4,7 @@ import ProjectCard from 'components/projectCard';
 import Section from 'components/section';
 import type { GetStaticPaths, GetStaticProps, NextPage } from 'next';
 import Link from 'next/link';
-import projectsData from 'resources/projects-data';
+import { getProjects, getProject } from 'lib/data-service';
 import { IProject } from 'shared/interfaces';
 import Image from 'next/image';
 import { FiArrowUpRight } from 'react-icons/fi';
@@ -61,35 +61,22 @@ const ProjectDetails: NextPage<Props> = (props: Props) => {
 };
 
 export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
-  const paths = projectsData.map(project => ({
-    params: { id: project.id },
-  }));
+  const projects = await getProjects();
   return {
-    paths: paths, //indicates that no page needs be created at build time
-    fallback: 'blocking', //indicates the type of fallback
+    paths: projects.map(p => ({ params: { id: p.id } })),
+    fallback: 'blocking',
   };
 };
 
 export const getStaticProps: GetStaticProps = async context => {
-  const params = context.params;
-
-  const project =
-    projectsData.find(project => project.id === (params!.id ?? '')) ?? null;
+  const id = context.params?.id as string;
+  const project = await getProject(id);
 
   if (!project) {
-    return {
-      redirect: {
-        destination: '/404',
-        permanent: false,
-      },
-    };
+    return { redirect: { destination: '/404', permanent: false } };
   }
 
-  return {
-    props: {
-      project: project,
-    },
-  };
+  return { props: { project }, revalidate: 30 };
 };
 
 export default ProjectDetails;

@@ -1,12 +1,15 @@
 import '../styles/globals.css';
 import type { AppProps } from 'next/app';
+import type { Session } from 'next-auth';
+import { SessionProvider } from 'next-auth/react';
 import Script from 'next/script';
 import { ThemeProvider } from '../components/ThemeProvider';
 
-function MyApp({ Component, pageProps }: AppProps) {
+function MyApp({ Component, pageProps }: AppProps<{ session: Session }>) {
   return (
-    <ThemeProvider>
-      <div className="h-screen m-0">
+    <SessionProvider session={pageProps.session}>
+      <ThemeProvider>
+        <div className="h-screen m-0">
         <Script
           strategy="lazyOnload"
           src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_ID}`}
@@ -23,8 +26,9 @@ function MyApp({ Component, pageProps }: AppProps) {
     `}
         </Script>
         <Component {...pageProps} />
-      </div>
-    </ThemeProvider>
+        </div>
+      </ThemeProvider>
+    </SessionProvider>
   );
 }
 
