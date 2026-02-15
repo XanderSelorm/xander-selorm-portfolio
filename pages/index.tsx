@@ -8,7 +8,11 @@ import projectsData from 'resources/projects-data';
 
 const Home: NextPage = () => {
   return (
-    <Layout title="Home">
+    <Layout
+      title="Home"
+      description="Alexander Selorm Kubi — software engineer based in Accra, Ghana. Building high-traffic web applications and leading development teams for 5+ years."
+      canonicalPath="/"
+    >
       <Hero showMouseAnimation isFullHeight>
         <p className="text-sm font-medium tracking-widest text-primary mono_font uppercase">
           Software Engineer

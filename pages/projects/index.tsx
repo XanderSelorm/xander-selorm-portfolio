@@ -7,7 +7,11 @@ import projectsData from 'resources/projects-data';
 
 const Projects: NextPage = () => {
   return (
-    <Layout title="My Projects">
+    <Layout
+      title="Projects"
+      description="A showcase of projects by Alexander Selorm Kubi — web applications, mobile apps, and platforms built with Next.js, React, TypeScript, Flutter, and more."
+      canonicalPath="/projects"
+    >
       <SectionWithBgImage isFullHeight={false}>
         <h1 id="my-name" className="text-4xl font-extrabold sm:text-5xl text-center w-full">
           Projects

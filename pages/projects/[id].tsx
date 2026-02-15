@@ -14,7 +14,11 @@ interface Props {
 }
 const ProjectDetails: NextPage<Props> = (props: Props) => {
   return (
-    <Layout title="Project Details">
+    <Layout
+      title={props.project.name}
+      description={props.project.description}
+      canonicalPath={`/projects/${props.project.id}`}
+    >
       {/* <!-- Hero --> */}
       <Hero>
         <>

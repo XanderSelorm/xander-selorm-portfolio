@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/alt-text */
 import Hero from 'components/hero';
 import Layout from 'components/Layout';
 import Section from 'components/section';
@@ -9,7 +8,11 @@ import Link from 'next/link';
 
 const Works: NextPage = () => {
   return (
-    <Layout title="About Me">
+    <Layout
+      title="About Me"
+      description="Learn more about Alexander Selorm Kubi — a software engineer from Accra, Ghana with experience building scalable web applications and leading engineering teams."
+      canonicalPath="/about-me"
+    >
       <Hero showMouseAnimation>
         <div className="relative w-full rounded-lg">
           <div className="w-full overflow-clip rounded-lg shadow">
@@ -19,7 +22,7 @@ const Works: NextPage = () => {
                   priority
                   className=" top-0 bg-top object-cover"
                   src="/imgs/about-portrait-mask-bw.png"
-                  alt=""
+                  alt="Alexander Selorm Kubi — portrait"
                   width={800}
                   height={1000}
                   style={{ width: '100%', height: 'auto' }}
@@ -59,7 +62,7 @@ const Works: NextPage = () => {
                   priority
                   className=" top-0 bg-top object-cover"
                   src="/imgs/about-landscape-mask-bw.png"
-                  alt=""
+                  alt="Alexander Selorm Kubi — landscape portrait"
                   width={1000}
                   height={800}
                   style={{ width: '100%', height: 'auto' }}

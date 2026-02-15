@@ -1,21 +1,43 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 
+const personSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Alexander Selorm Kubi',
+  alternateName: 'Xander Selorm',
+  url: 'https://www.xanderselorm.com',
+  image: 'https://www.xanderselorm.com/imgs/my-portrait.png',
+  jobTitle: 'Software Engineer',
+  worksFor: {
+    '@type': 'Organization',
+    name: 'Freelance',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Accra',
+    addressCountry: 'GH',
+  },
+  sameAs: [
+    'https://github.com/xanderselorm',
+    'https://linkedin.com/in/xanderselorm',
+  ],
+};
+
 export default function Document() {
   return (
     <Html lang="en" suppressHydrationWarning>
       <Head>
+        {/* Site-wide defaults — per-page values in Layout.tsx override these */}
         <meta property="og:site_name" content="Xander Selorm" />
-        <meta property="og:title" content="Xander Selorm" />
-        <meta property="og:description" content="Xander Selorm is a software engineer based in Accra, Ghana. He is passionate about building software that solves real-world problems." />
-        <meta property="og:image" content="https://www.xanderselorm.com/imgs/my-portrait.png" />
-        <meta property="og:image:width" content="1200" />
-        <meta property="og:image:height" content="630" />
+        <meta property="og:locale" content="en_US" />
         <meta property="og:image:secure_url" content="https://www.xanderselorm.com/imgs/my-portrait.png" />
         <meta property="og:image:type" content="image/png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Xander Selorm" />
-        <meta name="twitter:description" content="Xander Selorm is a software engineer based in Accra, Ghana. He is passionate about building software that solves real-world problems." />
-        <meta name="twitter:image" content="https://www.xanderselorm.com/imgs/my-portrait.png" />
+
+        {/* Structured data — Person */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }}
+        />
       </Head>
       <body>
         <Main />
