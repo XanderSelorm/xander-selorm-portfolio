@@ -19,31 +19,28 @@ const Home: NextPage<Props> = ({ projects }) => {
       canonicalPath="/"
     >
       <Hero showMouseAnimation isFullHeight>
-        <p className="text-sm font-medium tracking-widest text-primary mono_font uppercase">
-          Software Engineer
+        <p className="text-sm font-medium tracking-widest text-primary mono_font">
+        // Software Engineer: Alexander Selorm Kubi
         </p>
 
         <h1
           id="my-name"
-          className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] w-full"
+          className="text-5xl sm:text-6xl lg:text-8xl font-extrabold tracking-tight leading-[1.05] w-full"
         >
-          Alexander Selorm Kubi
+          Build{' '}
+          <span className="text-primary">intentionally.</span>
+          <span className="blink-cursor text-primary/60 ml-1 flex items-center inline-flex">|</span>
         </h1>
 
         <p className="text-lg sm:text-xl text-muted-foreground max-w-2xl leading-relaxed">
-          Building high-traffic web applications and leading development teams
-          for{' '}
-          <span className="text-foreground font-semibold">
-            {new Date().getFullYear() - 2020}+ years
-          </span>
-          . Currently working from Ghana, West Africa.
+          {new Date().getFullYear() - (2020 + 1)}+ years shipping high-traffic web apps and leading development teams.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 pt-4">
-          <Link href="/projects" className="btn btn-solid">
-            View my work
+          <Link href="/projects" className="btn btn-solid !rounded-full">
+            See my work →
           </Link>
-          <Link href="/contact" className="btn btn-outlined">
+          <Link href="/contact" className="btn btn-outlined !rounded-full">
             Get in touch
           </Link>
         </div>

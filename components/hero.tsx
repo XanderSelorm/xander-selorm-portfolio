@@ -83,7 +83,7 @@ const Hero: FunctionComponent<IProps> = ({
       hasInnerContainerWidth={false}
       className={cn(
         'relative text-foreground flex flex-col items-start overflow-hidden',
-        isFullHeight && 'min-h-[85vh] justify-center',
+        isFullHeight && 'min-h-[85vh] h-[100dvh] justify-center',
         className,
       )}
       ref={sectionRef}

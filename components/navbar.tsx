@@ -38,9 +38,9 @@ const Navbar = () => {
     <nav className="fixed top-0 z-50 w-full text-foreground">
       <div
         className={cn(
-          'py-3 flex justify-center transition-all duration-300',
+          'flex justify-center transition-all duration-300',
           scrolled
-            ? 'bg-background/90 backdrop-blur-xl border-b border-border shadow-sm'
+            ? 'bg-background/70 backdrop-blur-md shadow-[0_8px_40px_rgba(0,0,0,0.12)]'
             : 'bg-transparent',
         )}
       >
