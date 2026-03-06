@@ -17,64 +17,18 @@ const Works: NextPage<Props> = ({ brief }) => {
       description="Learn more about Alexander Selorm Kubi — a software engineer from Accra, Ghana with experience building scalable web applications and leading engineering teams."
       canonicalPath="/about-me"
     >
-      <Hero showMouseAnimation>
-        <div className="relative w-full rounded-lg">
-          <div className="w-full overflow-clip rounded-lg shadow">
-            <div className="h-full w-full bg-card sm:hidden">
-              <div className="relative h-full w-full ">
-                <Image
-                  priority
-                  className=" top-0 bg-top object-cover"
-                  src="/imgs/about-portrait-mask-bw.png"
-                  alt="Alexander Selorm Kubi — portrait"
-                  width={800}
-                  height={1000}
-                  style={{ width: '100%', height: 'auto' }}
-                />
-              </div>
-              <div className="flex flex-col space-y-5 p-8 pt-0 text-start">
-                <h4 className="text-4xl font-bold leading-normal">
-                  Alexander
-                  <br />
-                  Selorm Kubi
-                </h4>
+      <Hero>
+        {/* Label */}
+        <p className="text-sm font-medium tracking-widest text-primary mono_font mb-6">
+          // About Me
+        </p>
 
-                {/* <p className="text-lg text-secondary">
-                  Software Developer
-                  <br />
-                  based in Ghana 🇬🇭
-                </p> */}
-              </div>
-            </div>
-
-            <div className="hidden w-full flex-nowrap bg-card sm:flex">
-              <div className="flex w-1/2 flex-col justify-center space-y-5 p-8 pr-0 text-start">
-                <h4 className="text-4xl font-bold leading-normal">
-                  Alexander
-                  <br />
-                  Selorm Kubi
-                </h4>
-
-                {/* <p className="text-lg text-secondary">
-                  Software Developer
-                  <br />
-                  based in Ghana 🇬🇭
-                </p> */}
-              </div>
-              <div className="relative h-full w-1/2">
-                <Image
-                  priority
-                  className=" top-0 bg-top object-cover"
-                  src="/imgs/about-landscape-mask-bw.png"
-                  alt="Alexander Selorm Kubi — landscape portrait"
-                  width={1000}
-                  height={800}
-                  style={{ width: '100%', height: 'auto' }}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Headline */}
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.05] mb-12">
+          Alexander
+          <br />
+          <span className="text-primary">Selorm Kubi.</span>
+        </h1>
       </Hero>
       <Section className="text-base">
         <div className="space-y-8 text-start">
