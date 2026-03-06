@@ -40,7 +40,7 @@ const Navbar = () => {
         className={cn(
           'flex justify-center transition-all duration-300',
           scrolled
-            ? 'bg-background/70 backdrop-blur-md shadow-[0_8px_40px_rgba(0,0,0,0.12)]'
+            ? 'bg-background/70 backdrop-blur-md'
             : 'bg-transparent',
         )}
       >

@@ -98,6 +98,8 @@ const Hero: FunctionComponent<IProps> = ({
         isContentCentered={centerText}
         className={'!px-0 h-full'}
       >
+        <div className="ghost-text top-[15%] left-0">BUILD</div>
+        <div className="ghost-text top-[45%] left-1/3">INTENTIONALLY</div>
         {children}
       </Section>
       {showMouseAnimation ? (
